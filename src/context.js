@@ -7,6 +7,7 @@ export const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSubmenuOpen, setIsSubmenOpen] = useState(false);
   const [location, setLocation] = useState({});
+  const [page, setPage] = useState({ page: "", links: [] }); ///has no value //in sublin ks have value
 
   const openSidebar = () => {
     setIsSidebarOpen(true);
@@ -16,6 +17,8 @@ export const AppProvider = ({ children }) => {
   };
 
   const openSubmenu = (text, coordinates) => {
+    const page = sublinks.find((link) => link.page === text); //get me the page that coming from the button
+    setPage(page);
     setLocation(coordinates);
     setIsSubmenOpen(true);
   };
@@ -34,6 +37,7 @@ export const AppProvider = ({ children }) => {
         closeSubmenu,
         openSubmenu,
         location,
+        page,
       }}
     >
       {children}
