@@ -2,6 +2,7 @@ import React from "react";
 import { FaTimes } from "react-icons/fa";
 import sublinks from "./data";
 import { useGlobalContext } from "./context";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
@@ -26,10 +27,10 @@ const Sidebar = () => {
                   {links.map((link, index) => {
                     const { url, icon, label } = link;
                     return (
-                      <a key={index} href={url}>
+                      <Link key={index} href={url}>
                         {icon}
                         {label}
-                      </a>
+                      </Link>
                     );
                   })}
                 </div>

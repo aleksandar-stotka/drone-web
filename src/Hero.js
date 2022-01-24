@@ -4,6 +4,7 @@ import phoneImg from "./images/phone.svg";
 import amazon from "./images/amazon.png";
 import consena from "./images/consena.jpg";
 import frshwork from "./images/frshwork.png";
+import people from "./images/people.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { AiOutlineCheck } from "react-icons/ai";
@@ -26,7 +27,12 @@ const Hero = () => {
             <button className="btn">Start Now</button>
           </article>
           <article className="hero-images">
-            <img src={phoneImg} className="phone-img" alt="phone" />
+            <img
+              src={people}
+              className="phone-img"
+              alt="phone"
+              data-aos="fade-left"
+            />
           </article>
         </div>
       </section>
