@@ -242,6 +242,15 @@ Stripe Styles
 
 
 }
+.icon {
+  width: 8rem;
+  height: 10vh;
+  display: block;
+  background-color: var(--clr-primary-2);
+  border-radius: 50%;
+  color:white;
+  padding: 0.3em;
+}
 .images {
   display: flex;
   justify-content: center;

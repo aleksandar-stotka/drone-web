@@ -6,7 +6,7 @@ import Submenu from "./Submenu";
 import { Route, Switch } from "react-router-dom";
 import Home from "./page/Home";
 import Company from "./page/Company";
-
+import InfoGrid from "./page/InfoGrid";
 import Products from "./page/Products";
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
+        <Route path="/person/:id" children={<InfoGrid />}></Route>
         <Route path="/products">
           <Products />
         </Route>

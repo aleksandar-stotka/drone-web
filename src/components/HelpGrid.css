@@ -1,15 +1,43 @@
 .card-content {
     width: 40rem;
-    height: 50vh;
-    background-color: aquamarine;
+    height: 60vh;
+    background-color: var( --clr-grey-9);
     margin:auto;
-    
+    letter-spacing: 1px;
     
 }
+ .card-content:hover {
+     box-shadow: 1px 2px 3px  var(  --clr-primary-3);
+     transition: ease-in 0.4s;
+ }
+ .link {
+     padding: 0.4em;
+     background: var(  --clr-primary-3);
+     color: white;
+     font-size: 1.3rem;
+     width: 10rem;
+
+ }
+ .link:hover {
+     background-color: rgb(146, 31, 60);
+     transition: ease-in 0.2s;
+ }
 .card {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 2em;
+    gap: 1em;
     padding: 2em;
+}
+.content-inner {
+    padding: 0.4em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+ .title {
+    padding: 2em;
+    color: var(  --clr-red-light);
+  
 }
