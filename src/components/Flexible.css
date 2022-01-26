@@ -1,0 +1,31 @@
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: aquamarine;
+    margin: 0 1em;
+
+}
+.flex-content {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.flex-container {
+    display: flex;
+    gap: 4em;
+    padding: 2em;
+    
+    text-align: center;
+}
+h3 {
+    font-size: 2.4rem;
+}
+.flex-img {
+    width: 34rem;
+}
+li {
+    display: flex;
+    margin: 1em;
+}

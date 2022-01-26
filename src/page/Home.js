@@ -1,4 +1,5 @@
 import React from "react";
+import Flexible from "../components/Flexible";
 import HelpGrid from "../components/HelpGrid";
 import Hero from "../Hero";
 
@@ -7,6 +8,7 @@ const Home = () => {
     <div>
       <Hero />
       <HelpGrid />
+      <Flexible />
     </div>
   );
 };

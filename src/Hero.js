@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useGlobalContext } from "./context";
-import phoneImg from "./images/phone.svg";
 import amazon from "./images/amazon.png";
 import consena from "./images/consena.jpg";
 import frshwork from "./images/frshwork.png";

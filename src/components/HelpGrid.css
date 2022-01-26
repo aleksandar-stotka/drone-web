@@ -1,9 +1,11 @@
 .card-content {
     width: 40rem;
-    height: 60vh;
+    height: 65vh;
     background-color: var( --clr-grey-9);
     margin:auto;
     letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
     
 }
  .card-content:hover {
@@ -15,7 +17,9 @@
      background: var(  --clr-primary-3);
      color: white;
      font-size: 1.3rem;
-     width: 10rem;
+     width: 7rem;
+     height: 6vh;
+     font-size: 1em;
 
  }
  .link:hover {
@@ -28,16 +32,17 @@
     flex-wrap: wrap;
     gap: 1em;
     padding: 2em;
+    height: auto;
 }
 .content-inner {
-    padding: 0.4em;
+    
     display: flex;
     align-items: center;
     text-align: center;
     flex-direction: column;
 }
  .title {
-    padding: 2em;
+    padding: 1em;
     color: var(  --clr-red-light);
   
 }
