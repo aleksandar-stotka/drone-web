@@ -1,0 +1,36 @@
+.login-form {
+    max-width: 360px;
+    margin:60px auto;
+    padding: 20px;
+
+}
+
+.login-form label {
+    display: block;
+    margin: 30px auto;
+
+}
+
+.login-form span {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.login-form input {
+    padding:  8px 6px;
+    font-size: 1em;
+    color:#777;
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    
+}
+.log {
+   color: rgb(251, 251, 251) ;
+   background: rgb(21, 163, 128);
+   border: none;
+   padding: 0.4em;
+   letter-spacing: 1px;
+}

@@ -7,6 +7,7 @@ import frshwork from "./images/frshwork.png";
 import people from "./images/people.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 import { AiOutlineCheck } from "react-icons/ai";
 const Hero = () => {
   const { closeSubmenu } = useGlobalContext();
@@ -25,6 +26,7 @@ const Hero = () => {
               with the most premium sales intelligence on the market.
             </p>
             <button className="btn">Start Now</button>
+            <div className="log-content"></div>
           </article>
           <article className="hero-images">
             <img

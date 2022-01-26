@@ -2,8 +2,11 @@ import React from "react";
 import logo from "./images/logo.svg";
 import { FaBars } from "react-icons/fa";
 import { useGlobalContext } from "./context";
+import { Link } from "react-router-dom";
+import { useLogout } from "./hooks/useLogout";
 
 const Navbar = () => {
+  const { logout } = useLogout();
   const { openSidebar, closeSubmenu, openSubmenu } = useGlobalContext();
   const displaySubmenu = (e) => {
     const page = e.target.textContent;
@@ -26,6 +29,7 @@ const Navbar = () => {
       <div className="nav-center">
         <div className="nav-header">
           <img src={logo} className="nav-logo" alt="stripe" />
+
           <button className="btn toggle-btn" onClick={openSidebar}>
             <FaBars />
           </button>
@@ -48,6 +52,13 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
+      <Link to="/login" className="btn">
+        login
+      </Link>
+      <Link to="/singup" className="btn">
+        SingUp
+      </Link>
+      <button className="btn" onClick={logout}></button>
     </nav>
   );
 };

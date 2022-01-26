@@ -1,0 +1,31 @@
+.singup-form {
+    max-width: 360px;
+    margin:60px auto;
+    padding: 20px;
+
+}
+
+.singup-form label {
+    display: block;
+    margin: 30px auto;
+    
+
+}
+
+.singup-form span {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 1.3rem;
+}
+
+.singup-form input {
+    padding:  8px 6px;
+    font-size: 1em;
+    color:#777;
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    
+}

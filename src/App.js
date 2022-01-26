@@ -8,6 +8,8 @@ import Home from "./page/Home";
 import Company from "./page/Company";
 import InfoGrid from "./page/InfoGrid";
 import Products from "./page/Products";
+import Login from "./login/Login";
+import SingUp from "./singup/SingUp";
 
 function App() {
   return (
@@ -26,6 +28,12 @@ function App() {
         </Route>
         <Route path="/company">
           <Company />
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/singup">
+          <SingUp />
         </Route>
       </Switch>
     </div>

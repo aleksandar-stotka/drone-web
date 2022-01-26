@@ -82,6 +82,7 @@ h4 {
 }
 h1 {
   font-size: 3rem;
+  color: var(  --clr-primary-2);
 }
 h2 {
   font-size: 2rem;
@@ -163,7 +164,7 @@ Stripe Styles
   border-radius: var(--radius);
   border-color: transparent;
   color: white;
-  background: var(--clr-black);
+  background: var(--clr-red-dark);
   cursor: pointer;
   transition: var(--transition);
 }
@@ -172,6 +173,8 @@ Stripe Styles
 }
 .nav-links {
   display: none;
+ 
+  
 }
 .signin-btn {
   display: none;
@@ -196,11 +199,21 @@ Stripe Styles
   grid-template-columns: 1fr;
   justify-items: center;
 }
+a {
+  margin: 1em;
+  width: 10rem;
+}
 .hero-center {
   width: 90vw;
   max-width: var(--max-width);
   display: grid;
   align-items: center;
+}
+.log-content {
+  width: 20rem;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
 }
 .hero-two {
      width: 100%;
@@ -270,6 +283,11 @@ Stripe Styles
 }
 .hero-images {
   display: none;
+ 
+}
+.phone-img {
+ border-radius: 50%;
+ 
 }
 
 /* nav media query */
