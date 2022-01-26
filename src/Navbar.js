@@ -4,9 +4,11 @@ import { FaBars } from "react-icons/fa";
 import { useGlobalContext } from "./context";
 import { Link } from "react-router-dom";
 import { useLogout } from "./hooks/useLogout";
+import { useAuthContext } from "./hooks/useAuthContext";
 
 const Navbar = () => {
   const { logout } = useLogout();
+  const { user } = useAuthContext();
   const { openSidebar, closeSubmenu, openSubmenu } = useGlobalContext();
   const displaySubmenu = (e) => {
     const page = e.target.textContent;
@@ -52,13 +54,24 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <Link to="/login" className="btn">
-        login
-      </Link>
-      <Link to="/singup" className="btn">
-        SingUp
-      </Link>
-      <button className="btn" onClick={logout}></button>
+      {!user && (
+        <>
+          <Link to="/login" className="btn">
+            login
+          </Link>
+          <Link to="/singup" className="btn">
+            SingUp
+          </Link>
+        </>
+      )}
+      {user && (
+        <>
+          <li>heloo {user.displayName} </li>
+          <button className="btn" onClick={logout}>
+            Logout
+          </button>
+        </>
+      )}
     </nav>
   );
 };

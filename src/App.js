@@ -10,8 +10,12 @@ import InfoGrid from "./page/InfoGrid";
 import Products from "./page/Products";
 import Login from "./login/Login";
 import SingUp from "./singup/SingUp";
+import { useAuthContext } from "./hooks/useAuthContext";
+import { Redirect } from "react-router-dom";
+import PageLogin from "./page/PageLogin";
 
 function App() {
+  const { user } = useAuthContext();
   return (
     <div>
       <Navbar />
@@ -29,11 +33,18 @@ function App() {
         <Route path="/company">
           <Company />
         </Route>
+        <Route path="/pagelogin">
+          {!user && <Redirect to="/login" />}
+          {user && <PageLogin />}
+          <PageLogin />
+        </Route>
         <Route path="/login">
-          <Login />
+          {user && <Redirect to="/pagelogin" />}
+          {!user && <Login />}
         </Route>
         <Route path="/singup">
-          <SingUp />
+          {user && <Redirect to="/pagelogin" />}
+          {!user && <SingUp />}
         </Route>
       </Switch>
     </div>
