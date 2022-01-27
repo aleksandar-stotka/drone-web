@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   FaAutoprefixer,
   FaSpaceShuttle,
@@ -10,38 +11,36 @@ const grid = [
   {
     id: 1,
     icon: <FaAutoprefixer className="icon" />,
-    title: "Create informed, unified go-to-market strategies",
-    desc: "I’ve used Cognism to find contacts in companies I thought weren’t qualified, but it turns out they are! Search filters like team size and company revenue are very good for expanding your target audience and prospecting to companies you would’ve previously dismissed”, Alexander Porter",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-9tOTX9jj4OXEQ2J3UXjdr6D5gKDElMBnCw&usqp=CAU",
+    title: "DJI AIR 2S",
+
+    img: "https://m.media-amazon.com/images/I/61OQEmuM6hL._AC_SS450_.jpg",
     descTwo: "",
   },
   {
     id: 2,
     icon: <FaSpaceShuttle className="icon" />,
 
-    title:
-      "Increase speed to connect and start having more conversations today",
-    desc: " Before we were only calling switchboards and an SDR would be lucky to have two conversations a day. Now using Cognism mobiles, we consistently have eight to ten conversations, resulting in three to four meetings booked",
+    title: "DJI fpv",
+
     url: "/company",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEugkpR9yY7si6HC03ggn2ePJNImR1OKH4EA&usqp=CAU",
+    img: "https://ae01.alicdn.com/kf/H4baf39f65ff7465e9e6c319365f46a0bA/iFlight-TITAN-XL5-Analog-250mm-5inch-4S-6S-FPV-Drone-BNF-with-SucceX-E-F4-45A.jpg_640x640.jpg",
   },
 
   {
     id: 3,
     icon: <FaBolt className="icon" />,
-    title: "Revenue Operations",
-    desc: "“We wanted to focus on more than just great inbound leads. We wanted to pick the companies we went after. It’s great that we could build out the platform to suit the needs of each team and that they could use it differently. Now everyone can find the companies they’re looking for",
+    title: "Compare Camera Drones",
+    video: "https://youtu.be/YYJbSRTlkCQ",
 
-    img: "https://149346090.v2.pressablecdn.com/wp-content/uploads/2022/01/RoW_India_IT_Header-768x432.jpg",
+    img: "https://www.dronenerds.com/media/product/6a6/dji-mavic-pro-drone-with-4k-hd-camera-cp-pt-000500-dji-45f.jpg",
   },
 
   {
     id: 4,
     icon: <FaRocket className="icon" />,
-    title: "Attract qualified leads your sales team will love",
-    desc: "We have a big marketing engine, but the problem is turning leads from an MQL to an SQL. With Cognism you can turn them into actionable conversations and opportunities. It’s improved the overall outcome of our B2B sales function,",
+    title: "matrice 300 rtk",
 
-    img: "https://149346090.v2.pressablecdn.com/wp-content/uploads/2022/01/RoW_India_IT_Header-768x432.jpg",
+    img: "https://topodrone.org/upload/iblock/a77/M200%20LIDAR%2002.jpg",
   },
 ];
 

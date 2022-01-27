@@ -6,7 +6,6 @@ const sublinks = [
     links: [
       { label: "payment", icon: <FaCreditCard />, url: "/products" },
       { label: "terminal", icon: <FaCreditCard />, url: "/company" },
-      { label: "connect", icon: <FaCreditCard />, url: "/products" },
     ],
   },
   {
@@ -14,8 +13,6 @@ const sublinks = [
     links: [
       { label: "plugins", icon: <FaBook />, url: "/products" },
       { label: "libraries", icon: <FaBook />, url: "/products" },
-      { label: "help", icon: <FaBook />, url: "/products" },
-      { label: "billing", icon: <FaBook />, url: "/products" },
     ],
   },
   {

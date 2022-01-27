@@ -8,21 +8,23 @@ import "aos/dist/aos.css";
 const HelpGrid = () => {
   const [card, setCard] = useState(grid);
   useEffect(() => {
-    Aos.init({ duration: 1500 });
+    Aos.init({ duration: 2000 });
   }, []);
   return (
     <>
-      <div className="card">
+      <div className="cart">
         {card.map((item) => {
-          const { id, title, desc, icon, url } = item;
+          const { id, title, desc, icon, img, url } = item;
           return (
-            <article className="card-content" key={id}>
+            <article className="content" key={id}>
               <span className="icon" data-aos="fade-right">
-                {icon}{" "}
+                {icon}
               </span>
-              <div className="content-inner">
-                <h3 className="title">{title}</h3>
+              <div className="inner">
+                <h2 className="title">{title}</h2>
                 <p className="desc">{desc}</p>
+                <img className="drone-image" src={img} alt="img" />
+
                 <Link className="link" to={`/person/${item.id}`}>
                   Show More
                 </Link>

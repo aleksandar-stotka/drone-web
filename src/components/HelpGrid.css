@@ -1,12 +1,23 @@
-.card-content {
-    width: 40rem;
-    height: 65vh;
-    background-color: var( --clr-grey-9);
-    margin:auto;
-    letter-spacing: 1px;
-    position: relative;
-    overflow: hidden;
-    
+
+.cart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    padding: 2em;
+
+}
+
+.drone-image {
+    width:30rem;
+    height: 50vh;
+    border-radius: 20%;
+
+}
+
+.drone-image:hover {
+    box-shadow: 1px 1px 1px 0px;
+    transition: ease-in 0.4s;
 }
  .card-content:hover {
      box-shadow: 1px 2px 3px  var(  --clr-primary-3);
@@ -20,29 +31,39 @@
      width: 7rem;
      height: 6vh;
      font-size: 1em;
+     display: block;
+     border-radius: 2em;
+     text-align: center;
+
+ }
+ .inner {
+     
+   display: flex;
+   justify-content: center;
+   align-items: center;     
+   flex-direction: column;
 
  }
  .link:hover {
      background-color: rgb(146, 31, 60);
      transition: ease-in 0.2s;
  }
-.card {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    padding: 2em;
-    height: auto;
-}
-.content-inner {
+ .dron-container {
+     
+ }
+
+.content {
+    width: 34rem;
     
-    display: flex;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
+    box-shadow: 2px 1px 1px;
+    
 }
  .title {
     padding: 1em;
-    color: var(  --clr-red-light);
+    color: var(  --clr-primary-1);
   
+}
+.desc {
+    color: var(  --clr-primary-2);
+    font-size: 1rem;
 }

@@ -1,40 +1,42 @@
 import React from "react";
 import "./Flexible.css";
+import { Link } from "react-router-dom";
 
 const Flexible = () => {
   return (
-    <div className="flex-container">
-      <div className="flex-image">
-        <img
-          src="https://www.cognism.com/hubfs/Microsite%20V2.0%20V1%20FINAL-40.png"
-          alt="flex"
-          className="flex-img"
-        />
-      </div>
+    <div className="link-container">
+      <Link className="link-content" to="/company">
+        <h3>Video Production</h3>
+        <figure className="meal-photo">
+          <img
+            className="showcase"
+            src="https://www.uaslogic.com/imgs/video1.jpg"
+            alt="img"
+          />
+        </figure>
+      </Link>
 
-      <div className="flex-description">
-        <h3>Flexible workflows</h3>
-        <h4>Regardless of whether you're looking to...</h4>
-        <ul className="flex-content">
-          <li>
-            <div className="circle"></div> Build lists & find contact details
-            for ideal-fit future customers
-          </li>
-          <li>
-            <div className="circle"></div> Qualify target accounts and identify
-            the buying committee
-          </li>
-          <li>
-            <div className="circle"></div> Refresh and enhance stale or
-            incomplete data
-          </li>
-          <li>
-            <div className="circle"></div> Enrich your Sales Navigator search
-            with actionable information
-          </li>
-        </ul>
-        <button className="btn">Learn More</button>
-      </div>
+      <Link className="link-content" to="/company">
+        <h3>Enterprise</h3>
+        <figure className="meal-photo">
+          <img
+            className="showcase"
+            src="https://dronexl.co/wp-content/uploads/2020/05/DJI-M300-is-the-fastest-deploying-enterprise-drone.jpg"
+            alt="img"
+          />
+        </figure>
+      </Link>
+
+      <Link className="link-content" to="/company">
+        <h3>agroculture</h3>
+        <figure className="meal-photo">
+          <img
+            className="showcase"
+            src="https://dji-official-fe.djicdn.com/dps/0042a681f6a88953425198b366794b57.jpg"
+            alt="img"
+          />
+        </figure>
+      </Link>
     </div>
   );
 };

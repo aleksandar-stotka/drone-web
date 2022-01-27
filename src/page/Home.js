@@ -1,7 +1,7 @@
 import React from "react";
 import Flexible from "../components/Flexible";
 import HelpGrid from "../components/HelpGrid";
-import Hero from "../Hero";
+import Hero from "./hero/Hero";
 
 const Home = () => {
   return (

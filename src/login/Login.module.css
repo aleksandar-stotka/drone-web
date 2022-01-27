@@ -10,6 +10,9 @@
     margin: 30px auto;
 
 }
+p {
+    color: red;
+}
 
 .login-form span {
     display: block;

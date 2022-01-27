@@ -5,7 +5,7 @@ import "./InfoGrid.css";
 
 const InfoGrid = () => {
   const [title, setTitle] = useState("name");
-  const [desc, setDesc] = useState("desc");
+  const [video, setDesc] = useState("desc");
   const [image, setImage] = useState();
   const { id } = useParams();
 
@@ -19,7 +19,7 @@ const InfoGrid = () => {
   }, []);
   return (
     <div className="container">
-      <p>{desc}</p>
+      <p>{video}</p>
       <h2>{title}</h2>
       <img src={image} alt="img" />
     </div>
