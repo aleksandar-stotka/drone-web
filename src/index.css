@@ -81,11 +81,13 @@ h4 {
   margin-bottom: 0.75rem;
 }
 h1 {
-  font-size: 3rem;
-  color: var(  --clr-primary-2);
+  
 }
-h2 {
-  font-size: 2rem;
+.hero h2 {
+  
+  font-size: 3rem;
+  color: var(   --clr-grey-9);
+  
 }
 h3 {
   font-size: 1.25rem;
@@ -95,7 +97,7 @@ h4 {
 }
 p {
   margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
+  color: white;
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -179,116 +181,7 @@ Stripe Styles
 .signin-btn {
   display: none;
 }
-.hero::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 40%;
-  top: 0;
-  left: 0;
-  background: url(./images/hero.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-.hero {
-  position: relative;
-  min-height: 100vh;
-  margin-top: -5rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-}
-a {
-  margin: 1em;
-  width: 10rem;
-}
-.hero-center {
-  width: 90vw;
-  max-width: var(--max-width);
-  display: grid;
-  align-items: center;
-}
-.log-content {
-  width: 20rem;
-  height: 20vh;
-  display: flex;
-  justify-content: center;
-}
-.hero-two {
-     width: 100%;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  align-items: center;
-  height: 40vh;
-  background-color: rgb(255, 255, 255);
-}
-.hero-three {
-  width: 100%;
-  height: 40vh;
-  background-color:var(--clr-primary-1) ;
-  color:white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 1px;
-  
-}
-.icons {
-  color: green;
-  width: 30px;
-  height: auto;
-}
-.inner-hero {
- max-width: var(--max-width);
- margin: auto;
- margin-top: 2em;
-}
-.img-comercial {
-  width: 10rem;
-  height: 20vh;
-  margin: 1em 1em;
-  border-radius: 50%;
-  
 
-
-}
-.icon {
-  width: 8rem;
-  height: 10vh;
-  display: block;
-  background-color: var(--clr-primary-2);
-  border-radius: 50%;
-  color:white;
-  padding: 0.3em;
-}
-.images {
-  display: flex;
-  justify-content: center;
-  padding: 1em;
-  
-  
-}
-
-.hero-info h1 {
-  text-transform: none;
-  max-width: 500px;
-  margin-bottom: 2rem;
-}
-.hero-info p {
-  max-width: 35em;
-  line-height: 1.8;
-}
-.hero-images {
-  display: none;
- 
-}
-.phone-img {
- border-radius: 50%;
- 
-}
 
 /* nav media query */
 @media screen and (min-width: 800px) {
@@ -458,6 +351,7 @@ a {
   padding: 2rem;
   border-radius: var(--radius);
   transition: var(--transition);
+  
 }
 .submenu::before {
   content: '';
@@ -475,6 +369,7 @@ a {
 
 .submenu.show {
   display: block;
+  
 }
 
 .submenu-center {
