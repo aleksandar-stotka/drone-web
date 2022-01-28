@@ -19,10 +19,7 @@
     box-shadow: 1px 1px 1px 0px;
     transition: ease-in 0.4s;
 }
- .card-content:hover {
-     box-shadow: 1px 2px 3px  var(  --clr-primary-3);
-     transition: ease-in 0.4s;
- }
+ 
  .link {
      padding: 0.4em;
      background: var(  --clr-primary-3);
@@ -55,7 +52,7 @@
 .content {
     width: 34rem;
     
-    box-shadow: 2px 1px 1px;
+   
     
 }
  .title {

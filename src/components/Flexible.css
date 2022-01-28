@@ -21,7 +21,7 @@ img {
 
 
 
-.meal-photo {
+.dron-photo {
     width: 100%;
     margin: 0;
     overflow: hidden;
@@ -29,7 +29,7 @@ img {
    
 }
 
-.meal-photo img {
+.dron-photo img {
     
     width: 100%;
     height: auto;
@@ -42,9 +42,14 @@ img {
     
 }
 
-.meal-photo img:hover {
+.dron-photo img:hover {
     opacity: 1;
     -webkit-transform: scale(1.03);
     -ms-transform: scale(1.03);
     transform: scale(1.03);
+}
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+
 }

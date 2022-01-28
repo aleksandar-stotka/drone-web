@@ -7,7 +7,7 @@ const Flexible = () => {
     <div className="link-container">
       <Link className="link-content" to="/company">
         <h3>Video Production</h3>
-        <figure className="meal-photo">
+        <figure className="dron-photo">
           <img
             className="showcase"
             src="https://www.uaslogic.com/imgs/video1.jpg"
@@ -18,7 +18,7 @@ const Flexible = () => {
 
       <Link className="link-content" to="/company">
         <h3>Enterprise</h3>
-        <figure className="meal-photo">
+        <figure className="dron-photo">
           <img
             className="showcase"
             src="https://dronexl.co/wp-content/uploads/2020/05/DJI-M300-is-the-fastest-deploying-enterprise-drone.jpg"
@@ -29,7 +29,7 @@ const Flexible = () => {
 
       <Link className="link-content" to="/company">
         <h3>agroculture</h3>
-        <figure className="meal-photo">
+        <figure className="dron-photo">
           <img
             className="showcase"
             src="https://dji-official-fe.djicdn.com/dps/0042a681f6a88953425198b366794b57.jpg"

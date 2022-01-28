@@ -22,7 +22,7 @@ const Hero = () => {
             <h2>DJI MAVIC 3</h2>
             <p>imaging Above Everything</p>
 
-            <button className="btn">Start Now</button>
+            <button className="btn">Watch Video</button>
 
             <div className="log-content"></div>
           </article>
