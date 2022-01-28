@@ -10,6 +10,8 @@ const dron =
   "https://climacell-microweather-v1.p.rapidapi.com/weather/forecast/hourly?lat=42.8237618&lon=-71.2216286&fields=precipitation";
 const Hero = () => {
   const { closeSubmenu } = useGlobalContext();
+  const { openSidebar, openModal } = useGlobalContext();
+
   useEffect(() => {
     Aos.init({ duration: 2500 });
   }, []);
@@ -18,13 +20,15 @@ const Hero = () => {
     <>
       <section className="hero" onMouseOver={closeSubmenu}>
         <div className="hero-center">
+       
           <article className="hero-info" data-aos="fade-up">
             <h2>DJI MAVIC 3</h2>
             <p>imaging Above Everything</p>
 
-            <button className="btn">Watch Video</button>
+            <button onClick={openModal} className="btn">Watch Video</button>
+           
 
-            <div className="log-content"></div>
+            <div  className="log-content"></div>
           </article>
         </div>
       </section>
