@@ -6,7 +6,7 @@ const Flexible = () => {
   return (
     <div className="link-container">
       <Link className="link-content" to="/company">
-        <h3>Video Production</h3>
+        <h3 className="dron-title">Video Production</h3>
         <figure className="dron-photo">
           <img
             className="showcase"
@@ -17,7 +17,7 @@ const Flexible = () => {
       </Link>
 
       <Link className="link-content" to="/company">
-        <h3>Enterprise</h3>
+        <h3 className="dron-title">Enterprise</h3>
         <figure className="dron-photo">
           <img
             className="showcase"
@@ -28,7 +28,7 @@ const Flexible = () => {
       </Link>
 
       <Link className="link-content" to="/company">
-        <h3>agroculture</h3>
+        <h3 className="dron-title">agroculture</h3>
         <figure className="dron-photo">
           <img
             className="showcase"

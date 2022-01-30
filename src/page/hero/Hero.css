@@ -1,0 +1,175 @@
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    
+   
+    background-image:  -webkit-linear-gradient(hsl(206, 68%, 9%), rgba(24, 108, 173, 0.7)), url(../../images/dronpeople.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+   
+   
+  }
+  .hero {
+    
+    min-height: 100vh;
+   
+    display: grid;
+    
+   
+    
+  }
+  
+  .btn-visible {
+    width: 150px;
+    height: 44px;
+    border: none;
+    color: white;
+    background-color: rgb(200, 15, 15);
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 #bbb89b;
+    transition: ease-out 0.4s;
+    font-size: 1.2rem;
+    outline: none;
+    margin: 0.8em;
+  }
+  .btn-visible:hover {
+    box-shadow: inset 300px 0 0 0 green;
+    cursor: pointer;
+    color: rgb(255, 247, 247);
+  }
+  .btn-video {
+    display: block;
+    padding: 1em;
+    cursor: pointer;
+    border: 3px solid black;
+    overflow: hidden;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  a {
+    margin: 1em;
+    width: 10rem;
+  }
+  .hero-center {
+    width: 100%;
+    padding: 4em;
+    max-width: var(--max-width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    left:1%;
+    
+  }
+  .log-content {
+    width: 20rem;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-two {
+       width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    align-items: center;
+    height: 40vh;
+    background-color: rgb(255, 255, 255);
+  }
+  .hero-three {
+    width: 100%;
+    height: 40vh;
+    background-color:var(--clr-primary-1) ;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1px;
+    
+  }
+  
+  .inner-hero {
+   max-width: var(--max-width);
+   margin: auto;
+   margin-top: 2em;
+  }
+  .img-comercial {
+    width: 10rem;
+    height: 20vh;
+    margin: 1em 1em;
+    border-radius: 50%;
+    
+  
+  
+  }
+  .icon {
+    width: 8rem;
+    height: 10vh;
+    display: block;
+    background-color: var(--clr-primary-2);
+    border-radius: 50%;
+    color:white;
+    padding: 0.3em;
+  }
+  .images {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    
+    
+  }
+  
+  .hero-info h1 {
+    text-transform: none;
+    max-width: 500px;
+    margin-bottom: 2rem;
+  }
+  .hero-info p {
+    max-width: 35em;
+    line-height: 1.8;
+  }
+  .hero-images {
+    display: none;
+   
+  }
+  @media screen and (min-width: 1400px) {
+    .hero-center {
+      padding-bottom: 20vh;
+    }
+    .phone-img {
+      width: 19rem;
+    }
+  }
+  @media screen and (min-width: 800px) {
+    .hero::before {
+      background-size: contain;
+      height: 100%;
+    }
+    .hero-center {
+      grid-template-columns: 2fr 1fr;
+    }
+  
+    .hero-info h1 {
+      font-size: 3rem;
+    }
+    .hero-info p {
+      font-size: 1.25rem;
+    }
+    .hero-images {
+      display: block;
+      justify-self: center;
+    }
+    .phone-img {
+      width: 12rem;
+    }
+  }
+  .icons {
+    color: green;
+    width: 40px;
+  }
+  

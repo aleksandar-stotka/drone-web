@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "./images/logo.svg";
 import { FaBars } from "react-icons/fa";
 import { useGlobalContext } from "./context";
 import { Link } from "react-router-dom";
 import { useLogout } from "./hooks/useLogout";
 import { useAuthContext } from "./hooks/useAuthContext";
+import { useState } from "react";
 
 const Navbar = () => {
   const { logout } = useLogout();
   const { user } = useAuthContext();
   const { openSidebar, closeSubmenu, openSubmenu } = useGlobalContext();
+  const [scroll, setScroll] = useState(null);
   const displaySubmenu = (e) => {
     const page = e.target.textContent;
 
@@ -26,8 +28,12 @@ const Navbar = () => {
     }
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", scroll);
+  }, []);
+
   return (
-    <nav className="nav" onMouseOver={handleSubmenu}>
+    <nav className="nav">
       <div className="nav-center">
         <div className="nav-header">
           <button className="btn toggle-btn" onClick={openSidebar}>
@@ -37,7 +43,7 @@ const Navbar = () => {
         <ul className="nav-links">
           <li>
             <button className="link-btn" onMouseOver={displaySubmenu}>
-              products
+              Search Models
             </button>
           </li>
           <li>

@@ -61,7 +61,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background: var(--clr-grey-10);
-  color: var(--clr-grey-1);
+
   line-height: 1.5;
   font-size: 0.875rem;
 }
@@ -80,9 +80,7 @@ h4 {
   line-height: 1.25;
   margin-bottom: 0.75rem;
 }
-h1 {
-  
-}
+
 .hero h2 {
   
   font-size: 3rem;
@@ -98,10 +96,7 @@ h3 {
 h4 {
   font-size: 0.875rem;
 }
-p {
-  margin-bottom: 1.25rem;
-  color: white;
-}
+
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
@@ -140,29 +135,40 @@ p {
   }
 }
 
+
+.change-color {
+   transition: all 1s ease-in-out;
+  background-color: rgb(17, 17, 2);
+  opacity: 0.7;
+  position:fixed;
+ 
+}
+
 /*
 =============== 
 Stripe Styles
 ===============
 */
 .nav {
-  height: 5rem;
+  height: 3rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   background: transparent;
-  position: relative;
+  
   z-index: 1;
+  width: 100%;
+  background-color:-webkit-linear-gradient(hsl(206, 68%, 9%), rgba(24, 108, 173, 0.7)),  ;
+  position: fixed;
+  color: rgb(196, 196, 21);
+ 
 }
 .nav-center {
-  width: 90vw;
+  width: 100vw;
   max-width: var(--max-width);
+  
 }
-.nav-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 .btn {
   font-size: 1rem;
   padding: 0.25rem 0.75rem;
@@ -178,124 +184,15 @@ Stripe Styles
 }
 .nav-links {
   display: none;
+  
  
   
 }
 .signin-btn {
   display: none;
 }
-.hero::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 30%;
-  top: 0;
-  left: 0;
-  background:  -webkit-linear-gradient(rgba(100, 109, 131, 0.7), rgba(11, 4, 71, 0.7)), url(./images/drone.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-.hero {
-  position: relative;
-  min-height: 100vh;
-  margin-top: -5rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-}
-a {
-  margin: 1em;
-  width: 10rem;
-}
-.hero-center {
-  width: 90vw;
-  max-width: var(--max-width);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
-.log-content {
-  width: 20rem;
-  height: 20vh;
-  display: flex;
-  justify-content: center;
-}
-.hero-two {
-     width: 100%;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  align-items: center;
-  height: 40vh;
-  background-color: rgb(255, 255, 255);
-}
-.hero-three {
-  width: 100%;
-  height: 40vh;
-  background-color:var(--clr-primary-1) ;
-  color:white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 1px;
-  
-}
-.icons {
-  color: green;
-  width: 30px;
-  height: auto;
-}
-.inner-hero {
- max-width: var(--max-width);
- margin: auto;
- margin-top: 2em;
-}
-.img-comercial {
-  width: 10rem;
-  height: 20vh;
-  margin: 1em 1em;
-  border-radius: 50%;
-  
 
 
-}
-.icon {
-  width: 8rem;
-  height: 10vh;
-  display: block;
-  background-color: var(--clr-primary-2);
-  border-radius: 50%;
-  color:white;
-  padding: 0.3em;
-}
-.images {
-  display: flex;
-  justify-content: center;
-  padding: 1em;
-  
-  
-}
-
-.hero-info h1 {
-  text-transform: none;
-  max-width: 500px;
-  margin-bottom: 2rem;
-}
-.hero-info p {
-  max-width: 35em;
-  line-height: 1.8;
-}
-.hero-images {
-  display: none;
- 
-}
-.phone-img {
- border-radius: 50%;
- 
-}
 
 /* nav media query */
 @media screen and (min-width: 800px) {
@@ -319,6 +216,7 @@ a {
     height: 100%;
     display: grid;
     align-items: center;
+   
   }
   .nav-links li {
     height: 100%;
@@ -360,31 +258,8 @@ a {
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .hero-center {
-    grid-template-columns: 2fr 1fr;
-    align-items: end;
-    padding-bottom: 12vh;
-  }
-  .hero-info h1 {
-    max-width: 100%;
-    font-size: 5.5rem;
-  }
-  .hero-images {
-    align-self: end;
-  }
-  .phone-img {
-    width: 15rem;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .hero-center {
-    padding-bottom: 20vh;
-  }
-  .phone-img {
-    width: 19rem;
-  }
-}
+
+
 
 /* sidebar */
 .sidebar-wrapper {
@@ -479,6 +354,10 @@ a {
   top: -5px;
   left: 50%;
   transform: translateX(-50%);
+}
+li {
+  padding: 2em;
+  margin-top: 2em;
 }
 
 .submenu.show {

@@ -5,10 +5,15 @@
     text-align: center;
      padding: 2em;
      height: 70h;
+     
 }
 .link-content {
     width: 38rem;
     height: 40vh;
+   
+    
+    
+ 
    
 }
 .section-meals {
@@ -25,8 +30,20 @@ img {
     width: 100%;
     margin: 0;
     overflow: hidden;
+    opacity: 0.6;
+
     
    
+}
+.dron-title {
+    z-index: 1000;
+    position: relative;
+    top: 50%;
+    color:var(--clr-primary-1); 
+    font-size: 3rem;
+     font-weight: bold;   
+    z-index: 4000;
+     
 }
 
 .dron-photo img {

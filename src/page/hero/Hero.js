@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import { useGlobalContext } from "../../context";
+import "./Hero.css";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 import { AiOutlineCheck } from "react-icons/ai";
+import { AiFillPlayCircle } from "react-icons/ai";
 
 const dron =
   "https://climacell-microweather-v1.p.rapidapi.com/weather/forecast/hourly?lat=42.8237618&lon=-71.2216286&fields=precipitation";
@@ -20,15 +22,21 @@ const Hero = () => {
     <>
       <section className="hero" onMouseOver={closeSubmenu}>
         <div className="hero-center">
-       
           <article className="hero-info" data-aos="fade-up">
             <h2>DJI MAVIC 3</h2>
-            <p>imaging Above Everything</p>
+            <p data-aos="fade-left" className="hero-para">
+              imaging Above Everything
+            </p>
 
-            <button onClick={openModal} className="btn">Watch Video</button>
-           
+            <button
+              data-aos="fade-top"
+              onClick={openModal}
+              className="btn-visible"
+            >
+              Watch Video <AiFillPlayCircle />{" "}
+            </button>
 
-            <div  className="log-content"></div>
+            <div className="log-content"></div>
           </article>
         </div>
       </section>
