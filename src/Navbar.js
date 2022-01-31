@@ -11,7 +11,10 @@ const Navbar = () => {
   const { logout } = useLogout();
   const { user } = useAuthContext();
   const { openSidebar, closeSubmenu, openSubmenu } = useGlobalContext();
-  const [scroll, setScroll] = useState(null);
+  const [button, setButton] = useState(true)
+  const [navbar, setNavbar] = useState(false)
+
+
   const displaySubmenu = (e) => {
     const page = e.target.textContent;
 
@@ -27,13 +30,34 @@ const Navbar = () => {
       closeSubmenu();
     }
   };
+  const changeScroll = () => {
+    if (window.innerWidth <= 960) {
+        setButton(false)
+    } else {
+      setButton(true)
+      }
+  }
 
   useEffect(() => {
-    window.addEventListener("scroll", scroll);
+    
+    changeScroll()
+   
   }, []);
+  window.addEventListener("resize", changeScroll);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+     setNavbar(true)
+    } else {
+      setNavbar(false)
+   }
+
+  }
+  window.addEventListener("scroll", changeBackground)
 
   return (
-    <nav className="nav">
+    <nav className={navbar ? 'navbar active' : 'nav'}
+>
       <div className="nav-center">
         <div className="nav-header">
           <button className="btn toggle-btn" onClick={openSidebar}>
