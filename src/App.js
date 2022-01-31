@@ -16,7 +16,8 @@ import PageLogin from "./page/PageLogin";
 import MavicSeries from "./components/series/mavic/MavicSeries";
 
 function App() {
-  const { user } = useAuthContext();
+  const { user, navNotVisible } = useAuthContext();
+  
   return (
     <div>
       <Navbar />
@@ -28,9 +29,9 @@ function App() {
           <Home />
         </Route>
         <Route path="/person/:id" children={<InfoGrid />}></Route>
-        <Route path="/mavic">
+        {<Route path="/mavic">
           <MavicSeries />
-        </Route>
+        </Route>}
         <Route path="/company">
           <Company />
         </Route>
