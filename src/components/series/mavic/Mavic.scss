@@ -1,7 +1,7 @@
 .header {
    
     
-    
+    background-color: black;
    
     
 }
@@ -9,10 +9,12 @@
   height: 80vh;
   width: 100%;
   position: relative;
+  padding: 4em;
+  margin: auto;
 }
 
 .video-container video {
-  width: 100%;
+  width: 90%;
   height: 100%;
   position: absolute;
   object-fit: cover;
@@ -33,7 +35,34 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
+  padding: 2em;
   .air-desc {
     padding: 3em;
   }
+}
+.description {
+  background-color: black;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  p {
+    color: white;
+    padding: 5em;
+    font-size: 2rem;
+    letter-spacing: 1px;
+   font-weight: bold;
+  }
+  .parametars {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+     h2 {
+       color: #F0B556;
+     }
+     h3 {
+       color: #f5ebeb;
+       padding: 1 bem;
+     }
+  }
+  
 }
