@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import logo from "./images/logo.svg";
 import { FaBars } from "react-icons/fa";
 import { useGlobalContext } from "./context";
 import { Link } from "react-router-dom";
 import { useLogout } from "./hooks/useLogout";
 import { useAuthContext } from "./hooks/useAuthContext";
 import { useState } from "react";
+
 
 const Navbar = () => {
   const { logout } = useLogout();
@@ -21,7 +21,7 @@ const Navbar = () => {
     const tempBtn = e.target.getBoundingClientRect();
     console.log(tempBtn);
     const center = (tempBtn.left + tempBtn.right) / 2;
-    const bottom = tempBtn.bottom - 3;
+    const bottom = tempBtn.bottom - 1;
 
     openSubmenu(page, { center, bottom });
   };
@@ -68,7 +68,10 @@ const Navbar = () => {
           <li>
             <button className="link-btn" onMouseOver={displaySubmenu}>
               Search Models
+              
+              
             </button>
+           
           </li>
           <li>
             <button className="link-btn" onMouseOver={displaySubmenu}>

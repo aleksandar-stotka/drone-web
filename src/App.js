@@ -13,6 +13,7 @@ import SingUp from "./singup/SingUp";
 import { useAuthContext } from "./hooks/useAuthContext";
 import { Redirect } from "react-router-dom";
 import PageLogin from "./page/PageLogin";
+import MavicSeries from "./components/series/mavic/MavicSeries";
 
 function App() {
   const { user } = useAuthContext();
@@ -27,8 +28,8 @@ function App() {
           <Home />
         </Route>
         <Route path="/person/:id" children={<InfoGrid />}></Route>
-        <Route path="/products">
-          <Products />
+        <Route path="/mavic">
+          <MavicSeries />
         </Route>
         <Route path="/company">
           <Company />

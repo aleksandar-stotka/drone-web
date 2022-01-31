@@ -9,8 +9,12 @@ export const AppProvider = ({ children }) => {
   const [location, setLocation] = useState({});
   const [page, setPage] = useState({ page: "", links: [] }); ///has no value //in sublin ks have value
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [navNotVisible, setNavNotVisible] = useState(false)
+  
 
-
+  const notNavVisible = () => {
+    setNavNotVisible(false)
+  }
   
   const openSidebar = () => {
     setIsSidebarOpen(true);
@@ -44,12 +48,15 @@ export const AppProvider = ({ children }) => {
         isSidebarOpen,
         isSubmenuOpen,
         isModalOpen,
+        navNotVisible,
         closeSidebar,
         openSidebar,
         closeSubmenu,
         openSubmenu,
         openModal,
         closeModal,
+         notNavVisible,
+
         location,
         page,
       }}

@@ -34,11 +34,14 @@ const Submenu = () => {
       <h4>{page}</h4>
       <div className={`submenu-center col-1`}>
         {links.map((link, index) => {
-          const { label, icon, url } = link;
+          const { label, icon, url, desc, img } = link;
           return (
             <a key={index} href={url}>
               {icon}
               {label}
+              {desc}
+              <img class="dron-img" src={img} alt="dron" />
+              
             </a>
           );
         })}

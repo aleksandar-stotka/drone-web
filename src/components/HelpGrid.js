@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import grid from "../data/grid";
-import "./HelpGrid.css";
+import "./HelpGrid.scss";
 import Aos from "aos";
 import "aos/dist/aos.css";
 

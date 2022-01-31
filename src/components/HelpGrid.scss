@@ -5,10 +5,7 @@
     justify-content: center;
     gap: 2em;
     padding: 2em;
-
-}
-
-.drone-image {
+    .drone-image {
     width:30rem;
     height: 50vh;
     border-radius: 20%;
@@ -19,7 +16,6 @@
     box-shadow: 1px 1px 1px 0px;
     transition: ease-in 0.4s;
 }
- 
  .link {
      padding: 0.4em;
      background: var(  --clr-primary-3);
@@ -33,6 +29,7 @@
      text-align: center;
 
  }
+ 
  .inner {
      
    display: flex;
@@ -64,3 +61,10 @@
     color: var(  --clr-primary-2);
     font-size: 1rem;
 }
+
+ 
+
+}
+
+
+
