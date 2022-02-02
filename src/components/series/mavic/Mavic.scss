@@ -3,15 +3,63 @@
     
     background-color: black;
    
+   
     
 }
+.inner-text {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-30% -30%);
+  width: 50rem;
+  z-index: 1000;
+ 
+}
+ .title-hero {
+      position: absolute;
+      top: 20%;
+      left: 30%;
+      width: 40rem;
+      height: 40vh;
+     
+      text-align: center;
+
+     h1 {
+       font-size: 7rem;
+       letter-spacing: 2px;
+     }
+      
+    }
+    .title  {
+      opacity: 0;
+
+    }
 .video-container {
   height: 80vh;
   width: 100%;
   position: relative;
   padding: 4em;
   margin: auto;
+  background-color:  -webkit-linear-gradient(hsl(206, 68%, 9%), rgba(24, 108, 173, 0.7),);
+  
 }
+.change-backround {
+  background-color: black;
+  width: 70rem;
+  height: auto;
+}
+.video-change {
+  opacity: 0;
+  transition: ease-in 0.4s;
+  position: relative;
+
+  
+}
+h1 {
+ 
+  color: #f5ebeb;
+}
+  
 
 .video-container video {
   width: 90%;
