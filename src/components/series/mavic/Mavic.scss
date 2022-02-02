@@ -27,6 +27,7 @@
      h1 {
        font-size: 7rem;
        letter-spacing: 2px;
+       color: #F0B556;
      }
       
     }
@@ -78,15 +79,12 @@ h1 {
   top: 40%;
   padding: 10px;
 }
-.section {
+.air-desc {
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  padding: 2em;
-  .air-desc {
-    padding: 3em;
-  }
+   padding: 2em;
+   align-items: center;
+   text-align: center;
 }
 .description {
   background-color: black;
@@ -113,4 +111,19 @@ h1 {
      }
   }
   
+}
+.dron-desc {
+  width: 100%;
+  background-color: black;
+  color: orange;
+  display: grid;
+   grid-template-columns: repeat(2 ,1fr);
+   padding: 3em;
+  height: 40vh;
+  align-items: center;
+  text-align: center;
+  h3 {
+    letter-spacing: 2px;
+    
+  }
 }

@@ -14,14 +14,18 @@ import { useAuthContext } from "./hooks/useAuthContext";
 import { Redirect } from "react-router-dom";
 import PageLogin from "./page/PageLogin";
 import MavicSeries from "./components/series/mavic/MavicSeries";
+import Create from "./page/create/Create";
+import Search from "./page/search/Search";
+import DroneDesc from "./page/dronDesc/DroneDesc";
+import DroneHome from "./page/dronHome/DroneHome";
 
 function App() {
   const { user, navNotVisible } = useAuthContext();
-  
+
   return (
     <div>
       <Navbar />
-       
+
       <Sidebar />
       <Submenu />
       <Switch>
@@ -29,9 +33,11 @@ function App() {
           <Home />
         </Route>
         <Route path="/person/:id" children={<InfoGrid />}></Route>
-        {<Route path="/mavic">
-          <MavicSeries />
-        </Route>}
+        {
+          <Route path="/mavic">
+            <MavicSeries />
+          </Route>
+        }
         <Route path="/company">
           <Company />
         </Route>
@@ -47,6 +53,18 @@ function App() {
         <Route path="/singup">
           {user && <Redirect to="/pagelogin" />}
           {!user && <SingUp />}
+        </Route>
+        <Route path="/create">
+          <Create />
+        </Route>
+        <Route path="/search">
+          <Search />
+        </Route>
+        <Route path="/description/:id">
+          <DroneDesc />
+        </Route>
+        <Route path="/droneHome">
+          <DroneHome />
         </Route>
       </Switch>
     </div>

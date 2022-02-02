@@ -6,14 +6,13 @@ import { useLogout } from "./hooks/useLogout";
 import { useAuthContext } from "./hooks/useAuthContext";
 import { useState } from "react";
 
-
 const Navbar = () => {
   const { logout } = useLogout();
   const { user } = useAuthContext();
-  const { openSidebar, closeSubmenu, openSubmenu } = useGlobalContext();
-  const [button, setButton] = useState(true)
-  const [navbar, setNavbar] = useState(false)
-
+  const { openSidebar, closeSubmenu, openSubmenu, newBack } =
+    useGlobalContext();
+  const [button, setButton] = useState(true);
+  const [navbar, setNavbar] = useState(false);
 
   const displaySubmenu = (e) => {
     const page = e.target.textContent;
@@ -32,32 +31,28 @@ const Navbar = () => {
   };
   const changeScroll = () => {
     if (window.innerWidth <= 960) {
-        setButton(false)
+      setButton(false);
     } else {
-      setButton(true)
-      }
-  }
+      setButton(true);
+    }
+  };
 
   useEffect(() => {
-    
-    changeScroll()
-   
+    changeScroll();
   }, []);
   window.addEventListener("resize", changeScroll);
 
   const changeBackground = () => {
     if (window.scrollY >= 80) {
-     setNavbar(true)
+      setNavbar(true);
     } else {
-      setNavbar(false)
-   }
-
-  }
-  window.addEventListener("scroll", changeBackground)
+      setNavbar(false);
+    }
+  };
+  window.addEventListener("scroll", changeBackground);
 
   return (
-    <nav className={navbar ? 'navbar active' : 'nav'}
->
+    <nav className={navbar ? "navbar active" : "nav"}>
       <div className="nav-center">
         <div className="nav-header">
           <button className="btn toggle-btn" onClick={openSidebar}>
@@ -68,10 +63,7 @@ const Navbar = () => {
           <li>
             <button className="link-btn" onMouseOver={displaySubmenu}>
               Search Models
-              
-              
             </button>
-           
           </li>
           <li>
             <button className="link-btn" onMouseOver={displaySubmenu}>
