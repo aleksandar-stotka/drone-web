@@ -83,12 +83,13 @@ h4 {
 
 .hero h2 {
   
-  font-size: 3rem;
+  font-size: 4rem;
   color: var(   --clr-grey-9);
   
 }
 .hero-three h3 {
   color: red;
+  
 }
 h3 {
   font-size: 1.25rem;
@@ -136,10 +137,7 @@ h4 {
 }
 
 
-.nav.active {
-display: none;
- 
-}
+
 
 /*
 =============== 

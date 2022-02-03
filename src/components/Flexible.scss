@@ -5,10 +5,11 @@
     text-align: center;
      padding: 2em;
      height: 70h;
+     background-color: var(--clr-primary-6) ;
 
      .link-content {
     width: 38rem;
-    height: 40vh;
+    height: 50vh;
 
 
     .section-meals {
@@ -37,7 +38,7 @@ img {
     z-index: 1000;
     position: relative;
     top: 50%;
-    color:var(--clr-primary-1); 
+    color: wheat; 
     font-size: 3rem;
      font-weight: bold;   
     z-index: 4000;

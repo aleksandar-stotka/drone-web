@@ -43,7 +43,7 @@ const Navbar = () => {
   window.addEventListener("resize", changeScroll);
 
   const changeBackground = () => {
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 50) {
       setNavbar(true);
     } else {
       setNavbar(false);
@@ -52,7 +52,7 @@ const Navbar = () => {
   window.addEventListener("scroll", changeBackground);
 
   return (
-    <nav className={navbar ? "navbar active" : "nav"}>
+    <nav className="nav">
       <div className="nav-center">
         <div className="nav-header">
           <button className="btn toggle-btn" onClick={openSidebar}>
@@ -95,6 +95,9 @@ const Navbar = () => {
           </button>
         </>
       )}
+      <Link className="btn" to="/create">
+        create
+      </Link>
     </nav>
   );
 };
