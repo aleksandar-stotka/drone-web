@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "./components/navbar/Navbar";
 
-import Sidebar from "./Sidebar";
-import Submenu from "./Submenu";
+import Sidebar from "./components/navbar/Sidebar";
+import Submenu from "./components/navbar/Submenu";
 import { Route, Switch } from "react-router-dom";
 import Home from "./page/Home";
-import Company from "./page/Company";
+import Store from "./components/Store";
 import InfoGrid from "./page/InfoGrid";
 import Products from "./page/Products";
 import Login from "./login/Login";
@@ -14,6 +14,7 @@ import { useAuthContext } from "./hooks/useAuthContext";
 import { Redirect } from "react-router-dom";
 import PageLogin from "./page/PageLogin";
 import MavicSeries from "./components/series/mavic/MavicSeries";
+import StoreList from "./page/storeList/StoreList";
 
 function App() {
   const { user, navNotVisible } = useAuthContext();
@@ -34,9 +35,7 @@ function App() {
             <MavicSeries />
           </Route>
         }
-        <Route path="/company">
-          <Company />
-        </Route>
+        <Route path="/store/:id" children={<StoreList />}></Route>
         <Route path="/pagelogin">
           {!user && <Redirect to="/login" />}
           {user && <PageLogin />}
@@ -49,6 +48,9 @@ function App() {
         <Route path="/singup">
           {user && <Redirect to="/pagelogin" />}
           {!user && <SingUp />}
+        </Route>
+        <Route path="/storelist">
+          <StoreList />
         </Route>
       </Switch>
     </div>

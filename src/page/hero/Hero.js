@@ -27,7 +27,7 @@ const Hero = () => {
             <p data-aos="fade-left" className="hero-para">
               imaging Above Everything
             </p>
-          
+
             <button
               data-aos="fade-top"
               onClick={openModal}

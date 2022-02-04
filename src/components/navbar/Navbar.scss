@@ -1,0 +1,110 @@
+.nav {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: transparent;
+    
+    z-index: 1;
+    width: 100%;
+    background-color:-webkit-linear-gradient(hsl(206, 68%, 9%), rgba(24, 108, 173, 0.7)),  ;
+    position: fixed;
+    
+   
+  }
+  .nav-center {
+    width: 100vw;
+    max-width: var(--max-width);
+    
+  }
+  
+  .btn {
+    font-size: 1rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius);
+    border-color: transparent;
+    color: white;
+    background: var(--clr-red-dark);
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  .btn:hover {
+    background: var(--clr-grey-5);
+  }
+  .nav-links {
+    display: none;
+    
+   
+    
+  }
+  .signin-btn {
+    display: none;
+  }
+  .dron-img {
+    width: 50px;
+    height: 39px;
+  }
+  .section {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: var(--max-width);
+  }
+  
+  @media screen and (min-width: 992px) {
+    .section {
+      width: 95vw;
+    }
+  }
+  
+  
+  
+  
+  /*
+  =============== 
+  Stripe Styles
+  ===============
+  */
+  
+  
+  
+  /* nav media query */
+  @media screen and (min-width: 800px) {
+    .nav-center {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+    }
+    .toggle-btn {
+      display: none;
+    }
+    .signin-btn {
+      display: inline-block;
+    }
+    .nav-links {
+      display: block;
+      justify-self: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      text-align: center;
+      height: 100%;
+      display: grid;
+      align-items: center;
+      
+     
+    }
+    .nav-links li {
+      height: 100%;
+    }
+    .link-btn {
+      height: 100%;
+      background: transparent;
+      border-color: transparent;
+      font-size: 1.1rem;
+      color: white;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+      width: 10rem;
+    }
+  }
+  
+  

@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import "./grid.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { AuthContexProvider } from "./contex/AuthContex";

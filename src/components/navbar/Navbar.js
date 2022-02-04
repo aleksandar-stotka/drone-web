@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import { FaBars } from "react-icons/fa";
-import { useGlobalContext } from "./context";
+import { useGlobalContext } from "../../context";
 import { Link } from "react-router-dom";
-import { useLogout } from "./hooks/useLogout";
-import { useAuthContext } from "./hooks/useAuthContext";
+import { useLogout } from "../../hooks/useLogout";
+import { useAuthContext } from "../../hooks/useAuthContext";
 import { useState } from "react";
+import "./Navbar.scss";
 
 const Navbar = () => {
   const { logout } = useLogout();
@@ -95,8 +96,8 @@ const Navbar = () => {
           </button>
         </>
       )}
-      <Link className="btn" to="/create">
-        create
+      <Link className="btn" to="/storelist">
+        Store
       </Link>
     </nav>
   );

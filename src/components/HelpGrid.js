@@ -16,11 +16,11 @@ const HelpGrid = () => {
         {card.map((item) => {
           const { id, title, desc, icon, img, url } = item;
           return (
-            <article className="content" key={id}>
-              <span className="icon" data-aos="fade-right">
-                {icon}
-              </span>
-              <div className="inner">
+            <article className="row" key={id}>
+              <div className="col span-2-of- box">
+                <span className="icon" data-aos="fade-right">
+                  {icon}
+                </span>
                 <h2 className="title">{title}</h2>
                 <p className="desc">{desc}</p>
                 <img className="drone-image" src={img} alt="img" />

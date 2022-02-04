@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useGlobalContext } from "./context";
+import { useGlobalContext } from "../../context";
 import { Link } from "react-router-dom";
+import "./Submenu.scss";
 
 const Submenu = () => {
   const {
@@ -41,7 +42,6 @@ const Submenu = () => {
               {label}
               {desc}
               <img class="dron-img" src={img} alt="dron" />
-              
             </a>
           );
         })}
