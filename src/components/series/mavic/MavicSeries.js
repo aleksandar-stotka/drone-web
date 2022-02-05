@@ -32,6 +32,12 @@ const MavicSeries = () => {
                 src="https://dji-official-fe.djicdn.com/reactor/assets/_next/static/videos/1f55dbc7-acf1-43ae-b37a-cd47e1e9bb07.mp4"
                 type="video/mp4"
               />
+            </video>{" "}
+            <video autoPlay muted loop>
+              <source
+                src="https://dji-official-fe.djicdn.com/reactor/assets/_next/static/videos/1f55dbc7-acf1-43ae-b37a-cd47e1e9bb07.mp4"
+                type="video/mp4"
+              />
             </video>
             <div className="caption"></div>
           </div>
