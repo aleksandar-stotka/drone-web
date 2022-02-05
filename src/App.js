@@ -29,7 +29,7 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/person/:id" children={<InfoGrid />}></Route>
+        <Route path="/dron/:id" children={<InfoGrid />}></Route>
         {
           <Route path="/mavic">
             <MavicSeries />

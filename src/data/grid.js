@@ -27,15 +27,6 @@ const grid = [
   },
 
   {
-    id: 3,
-    icon: <FaBolt className="icon" />,
-    title: "Compare Camera Drones",
-    video: "https://youtu.be/YYJbSRTlkCQ",
-
-    img: "https://www.dronenerds.com/media/product/6a6/dji-mavic-pro-drone-with-4k-hd-camera-cp-pt-000500-dji-45f.jpg",
-  },
-
-  {
     id: 4,
     icon: <FaRocket className="icon" />,
     title: "matrice 300 rtk",

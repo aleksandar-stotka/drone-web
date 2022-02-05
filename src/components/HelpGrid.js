@@ -12,26 +12,25 @@ const HelpGrid = () => {
   }, []);
   return (
     <>
-      <div className="cart">
-        {card.map((item) => {
-          const { id, title, desc, icon, img, url } = item;
-          return (
-            <article className="row" key={id}>
-              <div className="col span-2-of- box">
-                <span className="icon" data-aos="fade-right">
-                  {icon}
-                </span>
-                <h2 className="title">{title}</h2>
-                <p className="desc">{desc}</p>
-                <img className="drone-image" src={img} alt="img" />
-
-                <Link className="link" to={`/person/${item.id}`}>
-                  Show More
-                </Link>
-              </div>
-            </article>
-          );
-        })}
+      <div className="section">
+        <div className="dron-center">
+          {card.map((item) => {
+            const { id, title, img, descTwo } = item;
+            return (
+              <article className="drones" key={id}>
+                <div className="img-container">
+                  <img src={img} alt={title} />
+                  <div className="drones-footer">
+                    <h3 className="drone-title">{title}</h3>
+                    <Link to={`/dron/${id}`} className="btn">
+                      show more
+                    </Link>
+                  </div>
+                </div>
+              </article>
+            );
+          })}
+        </div>
       </div>
     </>
   );

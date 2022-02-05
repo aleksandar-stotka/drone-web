@@ -1,7 +1,8 @@
 .hero::before {
     content: '';
-    position: absolute;
+    
     width: 100%;
+    height: 50vh;
     
    
     background-image:  -webkit-linear-gradient(hsl(206, 68%, 9%), rgba(24, 108, 173, 0.7)), url(../../images/dronpeople.jpg);
@@ -18,6 +19,16 @@
     display: grid;
     
    
+    
+  }
+  .hero h2 {
+  
+    font-size: 4rem;
+    color: var(   --clr-grey-9);
+    
+  }
+  .hero-three h3 {
+    color: red;
     
   }
   

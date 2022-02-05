@@ -1,72 +1,48 @@
+img {
+    width: 100%;
+    display: block;
+}
 
-.cart {
+.dron-center {
+    width: var(--smallWidth);
+    margin: 0 auto;
+    max-width: var(--fullWidth);
+    display: grid;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    /* align-items: start; */
+  }
+  @media screen and (min-width: 576px) {
+    .dron-center {
+      grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
+    }
+  }
+   
+  .drones {
+    background: var(--mainWhite);
+    margin-bottom: 2rem;
+    box-shadow: var(--lightShadow);
+    transition: var(--mainTransition);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    border-radius: var(--mainBorderRadius);
+
+  }
+  .drones:hover {
+    box-shadow: var(--darkShadow);
+  }
+  .dornes img {
+    height: 20rem;
+    object-fit: cover;
+    border-top-left-radius: var(--mainBorderRadius);
+    border-top-right-radius: var(--mainBorderRadius);
+
+  }
+.drones-footer {
+    padding: 1.5rem;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-   
-    
-      background-color: rgb(255, 255, 255);
-    .drone-image {
-    width:30rem;
-    height: 50vh;
-    border-radius: 20%;
-  
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
 
 }
-
-.drone-image:hover {
-    
-    transition: ease-in 0.4s;
-}
- .link {
-     
-     background: var(  --clr-primary-3);
-     color: white;
-     font-size: 1.3rem;
-     width: 7rem;
-     height: 6vh;
-     font-size: 1em;
-    
-     border-radius: 2em;
-     text-align: center;
-
- }
- 
- .inner {
-     
-   display: flex;
-   justify-content: center;
-   align-items: center;     
-   flex-direction: column;
-  
- }
- .link:hover {
-     background-color: rgb(146, 31, 60);
-     transition: ease-in 0.2s;
- }
- .dron-container {
-     
- }
-
-.content {
-    width: 50rem;
-    
-   
-    
-}
- .title {
-    padding: 1em;
-    color: var(  --clr-primary-1);
-  
-}
-.desc {
-    color: var(  --clr-primary-2);
-    font-size: 1rem;
-}
-
- 
-
-}
-
-
-
