@@ -7,6 +7,7 @@ import NavCart from "../../components/navCart/NavCart";
 
 const initialStore = {
   count: 2,
+  amount: 1,
 };
 
 const store = createStore(reducer, initialStore); //there i create store with createStore from redux
@@ -21,7 +22,7 @@ function reducer(state) {
 const StoreList = () => {
   return (
     <main>
-      <NavCart />
+      <NavCart cart={store.getState()} />
       <CartContainer />
     </main>
   );
