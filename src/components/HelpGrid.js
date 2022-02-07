@@ -17,7 +17,7 @@ const HelpGrid = () => {
           {card.map((item) => {
             const { id, title, img, descTwo } = item;
             return (
-              <article className="drones" key={id}>
+              <div className="drones" key={id}>
                 <div className="img-container">
                   <img src={img} alt={title} />
                   <div className="drones-footer">
@@ -27,7 +27,7 @@ const HelpGrid = () => {
                     </Link>
                   </div>
                 </div>
-              </article>
+              </div>
             );
           })}
         </div>

@@ -22,7 +22,7 @@ const Hero = () => {
     <>
       <section className="hero" onMouseOver={closeSubmenu}>
         <div className="hero-center">
-          <article className="hero-info" data-aos="fade-up">
+          <div className="hero-info" data-aos="fade-up">
             <h2>DJI MAVIC 3</h2>
             <p data-aos="fade-left" className="hero-para">
               imaging Above Everything
@@ -37,7 +37,7 @@ const Hero = () => {
             </button>
 
             <div className="log-content"></div>
-          </article>
+          </div>
         </div>
       </section>
 
