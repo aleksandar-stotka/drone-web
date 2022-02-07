@@ -10,6 +10,10 @@ const CartItems = ({ id, title, price, img, amount, cart }) => {
         <h4>price:{price}$</h4>
         <span>{amount}</span>
       </div>
+      <div className="button-container">
+        <button>add</button>
+        <button>add</button>
+      </div>
     </div>
   );
 };
