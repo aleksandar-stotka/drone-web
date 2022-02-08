@@ -1,25 +1,38 @@
 import React from "react";
 import CartItems from "../../components/cart/CartItems";
-import cartItems from "../../data/cart-items";
 import "./StoreContainer.scss";
+import { connect } from "react-redux";
+import { CLEAR_CART } from "../../actions";
 
-const CartContainer = ({ allTotal }) => {
-  const { total } = allTotal;
+const CartContainer = ({ total, cart = [], dispatch }) => {
+  //with dispatch we have acsses
   return (
     <>
       <div className="store-container">
         <div>
-          {cartItems.map((item) => {
-            return <CartItems key={cartItems.id} {...item} />;
+          {cart.map((item) => {
+            return <CartItems key={item.id} {...item} />;
           })}
         </div>
       </div>
       <div className="cart-total">
         <h1>total</h1>
         <h2 className="total">{total}</h2>
+        <button
+          className="btn clear-btn"
+          onClick={() => dispatch({ type: CLEAR_CART })}
+        >
+          clear cart
+        </button>
       </div>
     </>
   );
 };
+//also map dispatc action
 
-export default CartContainer;
+const mapStateToProps = (store) => {
+  console.log(store);
+  return { cart: store.cart, total: store.total };
+};
+
+export default connect(mapStateToProps)(CartContainer);

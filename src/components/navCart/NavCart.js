@@ -12,7 +12,7 @@ const NavCart = ({ amount }) => {
     </div>
   );
 };
-const mapStateToProps = (state, dispatch) => {
+const mapStateToProps = (state) => {
   return { amount: state.amount };
   //no we have acsses to state
 };
