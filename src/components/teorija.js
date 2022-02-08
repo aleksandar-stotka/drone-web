@@ -9,3 +9,17 @@
 // toa go pravime so if state proveruvame dali akcijata so ja dispath e ednakva
 //akcijata ja potvrduvame so store.dispatch({type: "DECREASE"})
 //I PRAVIME nov object
+//if no one action match than return old state
+//RDUCER// one folder for reducer
+
+//WE looking for provider and wrap all apllication
+//and we use connect function in each components
+//with connect we connect component with state
+//export default connect(mapStateProps)(NavCart);
+
+//then create function mapStateToProps
+//const mapStateToProps = (state) => {
+//console.log(state);
+//no we have acsses to state
+//};
+//
