@@ -41,7 +41,7 @@ const Submenu = () => {
               {icon}
               {label}
               {desc}
-              <img class="dron-img" src={img} alt="dron" />
+              <img className="dron-img" src={img} alt="dron" />
             </a>
           );
         })}
