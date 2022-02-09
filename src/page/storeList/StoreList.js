@@ -24,7 +24,7 @@ const StoreList = () => {
   return (
     <div>
       <StoreBar />
-      <Products />
+      <Products products={products} />
     </div>
   );
 };
