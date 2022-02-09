@@ -13,6 +13,7 @@ import { Redirect } from "react-router-dom";
 import PageLogin from "./page/PageLogin";
 import MavicSeries from "./components/series/mavic/MavicSeries";
 import StoreList from "./page/storeList/StoreList";
+import StoreBar from "./components/navbar/StoreBar";
 
 function App() {
   const { user } = useAuthContext();
