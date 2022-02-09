@@ -14,6 +14,8 @@ export default makeStyles(() => ({
   },
   cardContent: {
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "space-around",
+    flexDirection: "column",
+    padding: "1em",
   },
 }));
