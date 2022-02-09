@@ -15,7 +15,7 @@ import MavicSeries from "./components/series/mavic/MavicSeries";
 import StoreList from "./page/storeList/StoreList";
 
 function App() {
-  const { user, navNotVisible } = useAuthContext();
+  const { user } = useAuthContext();
 
   return (
     <div>
