@@ -3,7 +3,7 @@ import { Container ,Typography, Button, Grid } from '@material-ui/core'
 import useStyles from "./styles"
 
 const Cart = ({cart}) => {
-    const isEmpty = !cart.line_items.len
+    const isEmpty = !cart.line_items
     const classes = useStyles()
     const EmptyCart = () => (
         <Typography variant="subtitle1" >You have no items in your shopping cart, start adding some!</Typography>

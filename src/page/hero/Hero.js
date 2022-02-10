@@ -24,9 +24,7 @@ const Hero = () => {
         <div className="hero-center">
           <div className="hero-info" data-aos="fade-up">
             <h2>DJI MAVIC 3</h2>
-            <p data-aos="fade-left" className="hero-para">
-              imaging Above Everything
-            </p>
+            <h3 data-aos="fade-left">imaging Above Everything</h3>
 
             <button
               data-aos="fade-top"

@@ -19,7 +19,7 @@
   }
   
   .btn {
-    font-size: 1rem;
+    font-size: 1.4rem;
     padding: 0.25rem 0.75rem;
     border-radius: var(--radius);
     border-color: transparent;
@@ -27,6 +27,7 @@
     background: var(--clr-red-dark);
     cursor: pointer;
     transition: var(--transition);
+    margin-top: 3em;
   }
   .btn:hover {
     background: var(--clr-grey-5);

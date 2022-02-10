@@ -12,6 +12,9 @@
    
    
   }
+  .para {
+    font-size: 2rem;
+  }
   .hero {
     
     min-height: 100vh;
@@ -21,16 +24,18 @@
    
     
   }
+  
+   .hero-info h3 {
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+  }
   .hero h2 {
   
     font-size: 4rem;
     color: var(   --clr-grey-9);
     
   }
-  .hero-three h3 {
-    color: red;
-    
-  }
+
   
   .btn-visible {
     width: 150px;
@@ -93,6 +98,7 @@
     align-items: center;
     text-align: center;
     letter-spacing: 1px;
+    font-size: 2rem;
     
   }
   

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import grid from "../data/grid";
 import { useParams } from "react-router-dom";
-import "./InfoGrid.css";
 
 const InfoGrid = () => {
   const [title, setTitle] = useState("name");

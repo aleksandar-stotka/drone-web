@@ -43,27 +43,7 @@ Variables
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 620px;
-  --fullWidth: 1170px;
-  --smallWidth: 85vw;
-  --primaryLightColor: #d4e6a5;
-  --primaryColor: #476a2e;
-  --primaryDarkColor: #c02c03;
-  --mainWhite: #fff;
-  --offWhite: #f7f7f7;
-  --mainBackground: #f1f5f8;
-  --mainOverlay: rgba(35, 10, 36, 0.4);
-  --mainBlack: #222;
-  --mainGrey: #ececec;
-  --darkGrey: #afafaf;
-  --mainRed: #bd0303;
-  --mainTransition: all 0.3s linear;
-  --mainSpacing: 0.3rem;
-  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
-  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
-  --mainBorderRadius: 0.25rem;
-  --smallWidth: 85vw;
-  --maxWidth: 40rem;
-  --fullWidth: 1170px;
+ 
 }
 /*
 =============== 
@@ -98,57 +78,12 @@ a {
 
 
 
-@media screen and (min-width: 800px) {
-  h1 {
-    font-size: 4rem;
-  }
-  h2 {
-    font-size: 2.5rem;
-  }
-  h3 {
-    font-size: 1.75rem;
-  }
-  h4 {
-    font-size: 1rem;
-  }
-  body {
-    font-size: 1rem;
-  }
-  h1,
-  h2,
-  h3,
-  h4 {
-    line-height: 1;
-  }
-}
 /*  global classes */
 
 /* section */
 
 /* hero media query */
-@media screen and (min-width: 800px) {
-  .hero::before {
-    background-size: contain;
-    height: 100%;
-  }
-  .hero-center {
-    grid-template-columns: 2fr 1fr;
-  }
 
-  .hero-info h1 {
-    font-size: 3rem;
-  }
-  .hero-info p {
-    font-size: 1.25rem;
-  }
-  .hero-images {
-    display: block;
-    justify-self: center;
-  }
-  .phone-img {
-    width: 12rem;
-  }
-}
 
 
 
