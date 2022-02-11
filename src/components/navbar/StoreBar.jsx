@@ -5,7 +5,8 @@ import logo from '../../assets/logo.jpg'
 import useStyles from "./navStyles"
 
 
-const StoreBar = ({totalItems}) => {
+
+const StoreBar = ({totalItems, isShow}) => {
     const classes = useStyles()
     return (
         <>
@@ -17,7 +18,7 @@ const StoreBar = ({totalItems}) => {
                     </Typography>
                     <div className={classes.grow} />
                     <div className={classes.button}>
-                        <IconButton aria-label="Show cart items" color='inherit'>
+                        <IconButton onClick={() => isShow()} aria-label="Show cart items" color='inherit'>
                             <Badge badgeContent={totalItems} color="secondary">
                                 <ShoppingCart/>
                             </Badge>

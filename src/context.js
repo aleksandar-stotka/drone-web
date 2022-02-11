@@ -11,6 +11,7 @@ export const AppProvider = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [navNotVisible, setNavNotVisible] = useState(false);
   const [newBack, setNewBack] = useState(false);
+  const [showNav, SetNav] = useState(true);
 
   const newBackground = async () => {
     try {
@@ -25,7 +26,9 @@ export const AppProvider = ({ children }) => {
   useEffect(() => {
     newBackground();
   }, [newBack]);
-
+  const navShow = () => {
+    SetNav(true);
+  };
   const notNavVisible = () => {
     setNavNotVisible(false);
   };
@@ -71,9 +74,11 @@ export const AppProvider = ({ children }) => {
         closeModal,
         notNavVisible,
         newBackground,
+        navShow,
 
         location,
         page,
+        showNav,
       }}
     >
       {children}

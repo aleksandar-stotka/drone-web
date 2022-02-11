@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "./components/navbar/Navbar";
 
 import Sidebar from "./components/navbar/Sidebar";
@@ -13,11 +13,13 @@ import { Redirect } from "react-router-dom";
 import PageLogin from "./page/PageLogin";
 import MavicSeries from "./components/series/mavic/MavicSeries";
 import StoreList from "./page/storeList/StoreList";
-import StoreBar from "./components/navbar/StoreBar";
+import { useGlobalContext } from "./context";
 
 function App() {
   const { user } = useAuthContext();
+  const { navShow } = useGlobalContext();
 
+  useEffect(() => {}, []);
   return (
     <div>
       <Navbar />

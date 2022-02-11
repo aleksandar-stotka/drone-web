@@ -10,8 +10,8 @@ import "./Navbar.scss";
 const Navbar = () => {
   const { logout } = useLogout();
   const { user } = useAuthContext();
-  const { openSidebar, closeSubmenu, openSubmenu, newBack } =
-    useGlobalContext();
+
+  const { openSidebar, closeSubmenu, openSubmenu } = useGlobalContext();
   const [button, setButton] = useState(true);
   const [navbar, setNavbar] = useState(false);
 
