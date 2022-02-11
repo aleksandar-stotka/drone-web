@@ -6,7 +6,7 @@ import useStyles from "./navStyles"
 
 
 
-const StoreBar = ({totalItems, isShow}) => {
+const StoreBar = ({totalItems, isShow, }) => {
     const classes = useStyles()
     return (
         <>
