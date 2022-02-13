@@ -21,10 +21,15 @@ const StoreList = () => {
     //data is our products
 
     setProducts(data);
+    console.log(data);
   };
 
   const storeIsShow = () => {
     setShowStore(false);
+  };
+
+  const backStore = () => {
+    setShowStore(true);
   };
 
   const fetchCart = async () => {
@@ -32,9 +37,24 @@ const StoreList = () => {
   };
 
   const handleAddToCart = async (productId, quanitity) => {
-    const item = await commerce.cart.add(productId, quanitity);
+    const { cart } = await commerce.cart.add(productId, quanitity);
 
-    setCart(item.cart);
+    setCart(cart);
+  };
+
+  const handleUpdatedCartQty = async (porductId, quanitity) => {
+    const { cart } = await commerce.cart.update(porductId, { quanitity });
+    setCart(cart);
+  };
+
+  const handleRemoveFromCart = async (productId) => {
+    const { cart } = await commerce.cart.remove(productId);
+    setCart(cart);
+  };
+
+  const handleEmptyCart = async () => {
+    const { cart } = await commerce.cart.empty();
+    setCart(cart);
   };
 
   useEffect(() => {
@@ -49,7 +69,15 @@ const StoreList = () => {
       {showStore && (
         <Products products={products} onAddToCart={handleAddToCart} />
       )}
-      {!showStore && <Cart cart={cart} />}
+      {!showStore && (
+        <Cart
+          cart={cart}
+          back={backStore}
+          handleUpdatedCartQty={handleUpdatedCartQty}
+          handleRemoveFromCart={handleRemoveFromCart}
+          handleEmptyCart={handleEmptyCart}
+        />
+      )}
     </div>
   );
 };
