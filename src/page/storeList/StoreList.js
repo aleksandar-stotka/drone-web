@@ -37,14 +37,14 @@ const StoreList = () => {
     setCart(await commerce.cart.retrieve());
   };
 
-  const handleAddToCart = async (productId, quanitity) => {
-    const { cart } = await commerce.cart.add(productId, quanitity);
+  const handleAddToCart = async (productId, quantity) => {
+    const { cart } = await commerce.cart.add(productId, quantity);
 
     setCart(cart);
   };
 
-  const handleUpdatedCartQty = async (porductId, quanitity) => {
-    const { cart } = await commerce.cart.update(porductId, { quanitity });
+  const handleUpdatedCartQty = async (porductId, quantity) => {
+    const { cart } = await commerce.cart.update(porductId, { quantity });
     setCart(cart);
   };
 
