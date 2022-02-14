@@ -19,6 +19,7 @@ const CartItem = ({item ,  onUpdateCartQty, onRemoveFromCart}) => {
           <CardContent className={classes.cardContent}>
                   <Typography variant='h5'>{item.name}</Typography>
                   <Typography variant='h5'>{item.line_total.formated_with_symbol}</Typography>
+                  <Typography variant='h5'>{item.line_total.price}</Typography>
               </CardContent>
                <CardActions className={classes.cardActions}>
                    <div className={classes.buttons}>

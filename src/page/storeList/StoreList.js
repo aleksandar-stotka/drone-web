@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 //reducer is way to update our store
 
 const StoreList = () => {
-  const { closeSubmenu, newBack } = useGlobalContext();
+  const { closeSubmenu, navShow } = useGlobalContext();
 
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
@@ -67,6 +67,7 @@ const StoreList = () => {
   return (
     <div onMouseOver={closeSubmenu}>
       <StoreBar totalItems={cart.total_items} isShow={storeIsShow} />
+
       {showStore && (
         <Products products={products} onAddToCart={handleAddToCart} />
       )}

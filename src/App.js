@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./components/navbar/Navbar";
 
 import Sidebar from "./components/navbar/Sidebar";
@@ -14,10 +14,11 @@ import PageLogin from "./page/PageLogin";
 import MavicSeries from "./components/series/mavic/MavicSeries";
 import StoreList from "./page/storeList/StoreList";
 import { useGlobalContext } from "./context";
+import Cart from "./components/Cart/Cart";
 
 function App() {
   const { user } = useAuthContext();
-  const { navShow } = useGlobalContext();
+  const [showNavbar, setShowNavbar] = useState(null);
 
   useEffect(() => {}, []);
   return (
@@ -51,7 +52,7 @@ function App() {
           {!user && <SingUp />}
         </Route>
         <Route path="/storelist">
-          <StoreList />
+          <StoreList navShow={showNavbar} />
         </Route>
       </Switch>
     </div>
