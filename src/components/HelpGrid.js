@@ -26,7 +26,6 @@ const HelpGrid = () => {
                       show more
                     </Link>
                   </div>
-                  <p>ace</p>
                 </div>
               </div>
             );

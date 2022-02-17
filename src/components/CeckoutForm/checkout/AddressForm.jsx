@@ -14,10 +14,24 @@ import FormInput from "./CustomTextField";
 
 import { commerce } from "../../../lib/commerce";
 
-
 const AddressForm = () => {
+ const [shippingCountries, setShippingContries ] =useState([])
+ const [shippingCountry, setShippingContry ] =useState('')
+ const [shippingSubdivisions, setShippingSubdivisions] = useState([])
+ const [shippingSubdivision, setShippingSubdivision] = useState('')
+ const [shippingOptions, setShippingOptions] = useState([])
+ const [shippingOption, setShippingOption] = useState('')
+
+   
+
+
   const methods = useForm()
 
+   const fetchShippingCotries = async (checkoutTokenId) => {
+     const {contries} = await commerce.services.localeListShippingContries(checkoutTokenId)
+     setShippingContries(contries)
+
+   }
   
 
 
@@ -41,8 +55,8 @@ const AddressForm = () => {
             <TextField required name="zip" label="ZIP / Postal code" />
             <Grid  xs={12} sm={6}>
                  <InputLabel>Shipping Country</InputLabel>
-                 <Select value={} fullWidth onChange={}>
-                   <MenuItem key={} value={}>
+                 <Select value fullWidth >
+                   <MenuItem key value>
                      Select me
                    </MenuItem>
 
@@ -50,8 +64,8 @@ const AddressForm = () => {
             </Grid>
             <Grid  xs={12} sm={6}>
                  <InputLabel>Shipping Subdivision</InputLabel>
-                 <Select value={} fullWidth onChange={}>
-                   <MenuItem key={} value={}>
+                 <Select fullWidth >
+                   <MenuItem >
                      Select me
                    </MenuItem>
 
@@ -59,8 +73,8 @@ const AddressForm = () => {
             </Grid>
             <Grid  xs={12} sm={6}>
                  <InputLabel>Shipping Options</InputLabel>
-                 <Select value={} fullWidth onChange={}>
-                   <MenuItem key={} value={}>
+                 <Select fullWidth >
+                   <MenuItem >
                      Select me
                    </MenuItem>
 

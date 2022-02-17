@@ -5,6 +5,8 @@ import { commerce } from "../../lib/commerce";
 import Cart from "../../components/Cart/Cart";
 import { useGlobalContext } from "../../context";
 import { Link } from "react-router-dom";
+import Checkout from "../../components/CeckoutForm/checkout/Checkout";
+import { ContactlessOutlined } from "@material-ui/icons";
 
 //
 
@@ -19,10 +21,9 @@ const StoreList = () => {
 
   const fetchProducts = async () => {
     const { data } = await commerce.products.list(); ///commers specific api call ,return promise, destruc data for response
-    //data is our products
+    //data is our product   s
 
     setProducts(data);
-    console.log(data);
   };
 
   const storeIsShow = () => {
@@ -57,12 +58,10 @@ const StoreList = () => {
     const { cart } = await commerce.cart.empty();
     setCart(cart);
   };
-
   useEffect(() => {
     fetchProducts();
     fetchCart();
   }, []);
-  console.log(cart);
 
   return (
     <div onMouseOver={closeSubmenu}>

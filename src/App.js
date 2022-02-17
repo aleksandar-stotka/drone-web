@@ -21,6 +21,8 @@ function App() {
   const { user } = useAuthContext();
   const [showNavbar, setShowNavbar] = useState(null);
 
+  const { cart } = useGlobalContext();
+
   useEffect(() => {}, []);
   return (
     <div>
@@ -56,7 +58,7 @@ function App() {
           <StoreList navShow={showNavbar} />
         </Route>
         <Route path="/checkout" exact>
-          <Checkout />
+          <Checkout cart={cart} />
         </Route>
       </Switch>
     </div>

@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import sublinks from "./data";
+import { commerce } from "./lib/commerce";
 
 const AppContext = React.createContext();
 
@@ -12,6 +13,7 @@ export const AppProvider = ({ children }) => {
   const [navNotVisible, setNavNotVisible] = useState(false);
   const [newBack, setNewBack] = useState(false);
   const [showNav, SetNav] = useState(true);
+  const [products, setProducts] = useState([]);
 
   const newBackground = async () => {
     try {
@@ -66,6 +68,7 @@ export const AppProvider = ({ children }) => {
         isModalOpen,
         navNotVisible,
         newBack,
+        products,
         closeSidebar,
         openSidebar,
         closeSubmenu,

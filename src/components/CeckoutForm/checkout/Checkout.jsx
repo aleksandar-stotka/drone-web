@@ -4,6 +4,8 @@ import {useState} from 'react'
 import AddressForm from "./AddressForm";
 import PaymentForm from "./PaymentForm";
 import { commerce } from "../../../lib/commerce";
+import { useGlobalContext } from "../../../context";
+
 
 import {
   CssBaseline,
@@ -23,8 +25,15 @@ import useStyles from "./styles";
     
 const steps = ["Shipping address", "Payment details"];
 
-const Checkout = () => {
+const Checkout = ({ cart }) => {
+  console.log(cart)
+ 
+
+
   const classes = useStyles();
+  const [activeStep, setActiveStep] = useState(0);
+  const [checkoutToken, setCheckoutToken] = useState(null)
+
 
 
    
@@ -32,15 +41,20 @@ const Checkout = () => {
   useEffect(() => {
     const generateToken = async () => {
       try {
-        const token = await commerce.checkout.generateToken()
+        const token = await commerce.checkout.generateToken(cart.id, { type: 'cart' })
+        
+           console.log(token)
+        setCheckoutToken(token)
+
            
       } catch (error) {
         
          }
-       }
+    }
+    generateToken()
+    
    },[])
-  const [activeStep, setActiveStep] = useState(0);
-
+               
   const Form = () => activeStep === 0 ? <AddressForm/> : <PaymentForm/>
 
   const Confirmation = () => {

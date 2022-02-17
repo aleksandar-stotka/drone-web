@@ -1,7 +1,8 @@
 import React from 'react'
 import { Container ,Typography, Button, Grid, CardActionArea } from '@material-ui/core'
 import useStyles from "./styles"
-import  CartItem  from './CartItem/CartItem'
+import CartItem from './CartItem/CartItem'
+import { Link } from 'react-router-dom'
 
 
     const Cart = ({cart, back, handleUpdatedCartQty,
@@ -31,9 +32,9 @@ import  CartItem  from './CartItem/CartItem'
                     <Button onClick={handleEmptyCart}  className={classes.emptyButton} size="large" type="button" variant='contained' color='secondary'>
                                  Empty Cart
                                 </Button>
-                    <Button className={classes.checkoutButton} size="large" type="button" variant='contained' color='primary'>
+                    <Link to='/checkout' className={classes.checkoutButton} size="large" type="button" variant='contained' color='primary'>
                                   checkout
-                                </Button>
+                                </Link>
                     <Button onClick={back} className={classes.checkoutButton} size="large" type="button" variant='contained' >
                                 back to products
                                 </Button>
