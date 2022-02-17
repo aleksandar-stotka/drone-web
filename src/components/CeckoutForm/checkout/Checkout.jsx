@@ -26,7 +26,6 @@ import useStyles from "./styles";
 const steps = ["Shipping address", "Payment details"];
 
 const Checkout = ({ cart }) => {
-  console.log(cart)
  
 
 

@@ -3,6 +3,7 @@ import { Container ,Typography, Button, Grid, CardActionArea } from '@material-u
 import useStyles from "./styles"
 import CartItem from './CartItem/CartItem'
 import { Link } from 'react-router-dom'
+import Checkout from '../CeckoutForm/checkout/Checkout'
 
 
     const Cart = ({cart, back, handleUpdatedCartQty,
@@ -47,13 +48,17 @@ import { Link } from 'react-router-dom'
         
       
     
-    return (
-        <Container>
+        return (
+            <>
+                  <Container>
             <div className={classes.toolbar}></div>
             <Typography className={classes.title} variant="h3" gutterBottom>Your Shopping Cart</Typography>
             {!cart.line_items.length ? <EmptyCart/> : <FilledCart/> }
 
-        </Container>
+                </Container>
+                <Checkout cart={ cart}/>
+        </>
+      
     )
 }
 
