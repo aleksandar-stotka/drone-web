@@ -15,7 +15,6 @@ import MavicSeries from "./components/series/mavic/MavicSeries";
 import StoreList from "./page/storeList/StoreList";
 import { useGlobalContext } from "./context";
 import Cart from "./components/Cart/Cart";
-import Checkout from "./components/CeckoutForm/checkout/Checkout";
 
 function App() {
   const { user } = useAuthContext();
@@ -56,9 +55,6 @@ function App() {
         </Route>
         <Route path="/storelist">
           <StoreList navShow={showNavbar} />
-        </Route>
-        <Route path="/checkout" exact>
-          <Checkout cart={cart} />
         </Route>
       </Switch>
     </div>
