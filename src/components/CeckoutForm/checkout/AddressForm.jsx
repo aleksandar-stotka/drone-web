@@ -13,6 +13,7 @@ import { useForm, FormProvider } from "react-hook-form";
 import FormInput from "./CustomTextField";
 
 import { commerce } from "../../../lib/commerce";
+import { ContactlessOutlined } from "@material-ui/icons";
 
 const AddressForm = ({ checkoutToken, cart }) => {
  const [shippingCountries, setShippingContries ] =useState([])
@@ -26,14 +27,29 @@ const AddressForm = ({ checkoutToken, cart }) => {
 
 
   const methods = useForm()
+  const countries = Object.entries(shippingCountries).map(([code, name]) => ({ id: code, label: name }))
+  const subdivisions = Object.entries(shippingSubdivisions).map(([code, name]) => ({ id: code, label: name }))
+   
+ 
 
+
+
+  console.log(countries)
    const fetchShippingCountries = async (checkoutToken) => {
      const { countries } = await commerce.services.localeListShippingCountries(checkoutToken)
 
-          console.log(countries)
 
      setShippingContries(countries)
+     setShippingContry(Object.keys(countries)[0])   //give me just key of countries ...AD  give me the firstone
+       //[AL,AT,BA]
 
+  }
+
+  const fetchSubdivisions = async (countryCode) => {
+    const { subdivisions } = await commerce.services.localeListSubdivisions(countryCode)
+    
+    setShippingSubdivisions(subdivisions)
+    setShippingSubdivision(Object.keys(subdivisions)[0])
 
   }
   ////////////////////////////////////////////////
@@ -42,7 +58,13 @@ const AddressForm = ({ checkoutToken, cart }) => {
     fetchShippingCountries(checkoutToken.id)
     
         
-   },[])
+  }, [])
+  
+  useEffect(() => {
+   if(shippingCountry) fetchSubdivisions(shippingCountry)
+    
+        
+   },[shippingCountry])
 
 
   return <>
@@ -65,19 +87,27 @@ const AddressForm = ({ checkoutToken, cart }) => {
             <TextField required name="zip" label="ZIP / Postal code" />
             <Grid  xs={12} sm={6}>
                  <InputLabel>Shipping Country</InputLabel>
-                 <Select value fullWidth >
-                   <MenuItem key value>
-                     Select me
+            <Select value={shippingCountry} fullWidth onChange={(e) => setShippingContry(e.target.value)} >
+              {countries.map((country) => (
+                   <MenuItem key={country.id} value={country.id}>
+                    {country.label}
                    </MenuItem>
+                        
+                      ))}
+                
 
                  </Select>
             </Grid>
             <Grid  xs={12} sm={6}>
                  <InputLabel>Shipping Subdivision</InputLabel>
-                 <Select fullWidth >
-                   <MenuItem >
-                     Select me
+                <Select value={shippingSubdivision} fullWidth onChange={(e) => setShippingSubdivision(e.target.value)} >
+              {subdivisions.map((subdivision) => (
+                   <MenuItem key={subdivision.id} value={subdivision.id}>
+                    {subdivision.label}
                    </MenuItem>
+                        
+                      ))}
+                
 
                  </Select>
             </Grid>
