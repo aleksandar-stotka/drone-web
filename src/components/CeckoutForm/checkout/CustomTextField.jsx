@@ -14,7 +14,7 @@ function FormInput({ name, label, required }) {
   control={control}
   label={label}
   fullWidth
-    required={required}
+    required
 />
     </Grid>
   );
