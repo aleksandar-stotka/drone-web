@@ -47,14 +47,15 @@ const Checkout = ({ cart }) => {
 
            
       } catch (error) {
-        
          }
     }
     generateToken()
     
-   },[])
+  }, [])
+
+  //////////
                
-  const Form = () => activeStep === 0 ? <AddressForm/> : <PaymentForm/>
+  const Form = () => activeStep === 0 ? <AddressForm checkoutToken={checkoutToken} /> : <PaymentForm/>
 
   const Confirmation = () => {
     return <div>Confirmation</div>;
