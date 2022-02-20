@@ -58,6 +58,8 @@ const StoreList = () => {
     const { cart } = await commerce.cart.empty();
     setCart(cart);
   };
+  /////////////////////////////////////////////////
+
   useEffect(() => {
     fetchProducts();
     fetchCart();

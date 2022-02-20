@@ -25,18 +25,40 @@ import useStyles from "./styles";
     
 const steps = ["Shipping address", "Payment details"];
 
-const Checkout = ({ cart }) => {
+const Checkout = ({ cart, hideCheck }) => {
+  
+  
  
-
+ 
 
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
   const [checkoutToken, setCheckoutToken] = useState(null)
   const [shippingData, setShippingData] = useState({})
+  const [order, setOrder] = useState({})
+  const [card, setCart] = useState(cart)
+  const [errorMessage, setErrorMessage] = useState('')
+
+  const handleCaptureCheckout = async (checkoutToken, newOrder) => {
+    try {
+      const incomingOrder = await commerce.checkout.capture(checkoutToken, newOrder)
+      setOrder(incomingOrder)
+      refreshCart()
+    } catch (error) {
+         setErrorMessage(error.data.error.message)
+      }
+  }
+  const refreshCart = async () => {
+    const newCart = await commerce.cart.refresh();
+    setCart(newCart)
+    
+
+  }
 
 
+  
 
-   
+  
 
   useEffect(() => {
     const generateToken = async () => {
@@ -55,7 +77,7 @@ const Checkout = ({ cart }) => {
   }, [cart])
 
   const nextStep = () => setActiveStep((prevActiveStep) => prevActiveStep + 1)
-  const back = () => setActiveStep((prevActiveStep) => prevActiveStep - 1)
+  const backStep = () => setActiveStep((prevActiveStep) => prevActiveStep - 1)
 
 
   const next = (data) => {
@@ -67,7 +89,7 @@ const Checkout = ({ cart }) => {
 
   //////////
                
-  const Form = () => activeStep === 0 ? <AddressForm checkoutToken={checkoutToken} next={next} /> : <PaymentForm shippingData={ shippingData} checkoutToken={checkoutToken}/>
+  const Form = () => activeStep === 0 ? <AddressForm checkoutToken={checkoutToken} next={next} hideCheck={hideCheck} /> : <PaymentForm shippingData={shippingData} checkoutToken={checkoutToken} backStep={backStep} onCaptureCheckout={handleCaptureCheckout} nextStep={nextStep} />
 
   const Confirmation = () => {
     return <div>Confirmation</div>;

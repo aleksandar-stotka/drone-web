@@ -4,14 +4,31 @@ import useStyles from "./styles"
 import CartItem from './CartItem/CartItem'
 import { Link } from 'react-router-dom'
 import Checkout from '../CeckoutForm/checkout/Checkout'
+import { useState } from 'react'
 
 
     const Cart = ({cart, back, handleUpdatedCartQty,
           handleRemoveFromCart ,
-           handleEmptyCart}) => {
-    const classes = useStyles();
+        handleEmptyCart }) => {
+        const [showCheckout, setShowCheckout] = useState(false)
+   
+        const classes = useStyles();
+
+           
+        const showCheck = () => {
+                setShowCheckout(true) 
+        }
+        const hideCheck = () => {
+           
+            
+            setShowCheckout(false )
+        }
+       
     const EmptyCart = () => (
-        <Typography variant="subtitle1" >You have no items in your shopping cart, start adding some!</Typography>
+        <Typography variant="subtitle1" >You have no items in your shopping cart, start adding some!
+          <Button onClick={showCheck}>Back to products</Button>
+        
+        </Typography>
     )
 
     const FilledCart = () => (
@@ -33,9 +50,9 @@ import Checkout from '../CeckoutForm/checkout/Checkout'
                     <Button onClick={handleEmptyCart}  className={classes.emptyButton} size="large" type="button" variant='contained' color='secondary'>
                                  Empty Cart
                                 </Button>
-                    <Link to='/checkout' className={classes.checkoutButton} size="large" type="button" variant='contained' color='primary'>
+                    <Button onClick={showCheck}  className={classes.checkoutButton} size="large" type="button" variant='contained' color='primary'>
                                   checkout
-                                </Link>
+                                </Button>
                     <Button onClick={back} className={classes.checkoutButton} size="large" type="button" variant='contained' >
                                 back to products
                                 </Button>
@@ -50,13 +67,13 @@ import Checkout from '../CeckoutForm/checkout/Checkout'
     
         return (
             <>
-                  <Container>
-            <div className={classes.toolbar}></div>
-            <Typography className={classes.title} variant="h3" gutterBottom>Your Shopping Cart</Typography>
-            {!cart.line_items.length ? <EmptyCart/> : <FilledCart/> }
+                {!showCheckout && <Container>
+                    <div className={classes.toolbar}></div>
+                    <Typography className={classes.title} variant="h3" gutterBottom>Your Shopping Cart</Typography>
+                    {!cart.line_items.length ? <EmptyCart /> : <FilledCart />}
 
-                </Container>
-                <Checkout cart={ cart}/>
+                </Container>}
+                {showCheckout && <Checkout cart={cart} hideCheck={hideCheck} /> }
         </>
       
     )

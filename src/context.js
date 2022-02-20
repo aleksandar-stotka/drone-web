@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
 import sublinks from "./data";
-import { commerce } from "./lib/commerce";
 
 const AppContext = React.createContext();
 

@@ -16,7 +16,7 @@ import FormInput from "./CustomTextField";
 import { commerce } from "../../../lib/commerce";
 import { ContactlessOutlined } from "@material-ui/icons";
 
-const AddressForm = ({ checkoutToken, next }) => {
+const AddressForm = ({ checkoutToken, next ,hideCheck}) => {
  const [shippingCountries, setShippingContries ] =useState([])
  const [shippingCountry, setShippingContry ] =useState('')
  const [shippingSubdivisions, setShippingSubdivisions] = useState([])
@@ -35,7 +35,6 @@ const AddressForm = ({ checkoutToken, next }) => {
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-  console.log(countries)
    const fetchShippingCountries = async (checkoutToken) => {
      const { countries } = await commerce.services.localeListShippingCountries(checkoutToken)
 
@@ -147,7 +146,7 @@ const AddressForm = ({ checkoutToken, next }) => {
 
         <br />
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <Link to="/storelist" variant="outlined">Back to Cart</Link>
+          <Button onClick={() => hideCheck()} variant="outlined">Back to Cart</Button>
           <Button type="submit" variant="contained" color="primary">Next</Button>
         </div>
 
