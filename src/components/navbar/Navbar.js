@@ -14,6 +14,7 @@ const Navbar = () => {
   const { openSidebar, closeSubmenu, openSubmenu } = useGlobalContext();
   const [button, setButton] = useState(true);
   const [navbar, setNavbar] = useState(false);
+  const [scrollPosition, setPosition] = useState({ scrollX: 0, scrollY: 0 });
 
   const displaySubmenu = (e) => {
     const page = e.target.textContent;
@@ -32,9 +33,9 @@ const Navbar = () => {
   };
   const changeScroll = () => {
     if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
       setButton(true);
+    } else {
+      setButton(false);
     }
   };
 

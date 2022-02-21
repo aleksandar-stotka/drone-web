@@ -39,22 +39,7 @@ const Checkout = ({ cart, hideCheck }) => {
   const [card, setCart] = useState(cart)
   const [errorMessage, setErrorMessage] = useState('')
 
-  const handleCaptureCheckout = async (checkoutToken, newOrder) => {
-    try {
-      const incomingOrder = await commerce.checkout.capture(checkoutToken, newOrder)
-      setOrder(incomingOrder)
-      refreshCart()
-    } catch (error) {
-         setErrorMessage(error.data.error.message)
-      }
-  }
-  const refreshCart = async () => {
-    const newCart = await commerce.cart.refresh();
-    setCart(newCart)
-    
-
-  }
-
+ 
 
   
 
@@ -75,6 +60,22 @@ const Checkout = ({ cart, hideCheck }) => {
     generateToken()
     
   }, [cart])
+   const handleCaptureCheckout = async (checkoutToken, newOrder) => {
+    try {
+      const incomingOrder = await commerce.checkout.capture(checkoutToken, newOrder)
+      setOrder(incomingOrder)
+      refreshCart()
+    } catch (error) {
+         setErrorMessage(error.data.error.message)
+      }
+  }
+  const refreshCart = async () => {
+    const newCart = await commerce.cart.refresh();
+    setCart(newCart)
+    
+
+  }
+
 
   const nextStep = () => setActiveStep((prevActiveStep) => prevActiveStep + 1)
   const backStep = () => setActiveStep((prevActiveStep) => prevActiveStep - 1)

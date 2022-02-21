@@ -1,5 +1,5 @@
 .nav {
-    height: 4rem;
+    
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -7,8 +7,8 @@
     
     z-index: 1;
     width: 100%;
-    background-color:-webkit-linear-gradient(hsl(206, 68%, 9%), rgba(24, 108, 173, 0.7)),  ;
-    position: fixed;
+    background-color: rgb(93, 158, 158);
+   
     
    
   }
@@ -17,6 +17,10 @@
     max-width: var(--max-width);
     
   }
+  .changeColor {
+    background-color: black;
+  }
+
   
   .btn {
     font-size: 1.4rem;
