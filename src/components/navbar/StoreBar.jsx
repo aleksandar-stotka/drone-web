@@ -18,14 +18,7 @@ const StoreBar = ({ totalItems, isShow }) => {
     <>
       <AppBar position="fixed" className={classes.appBar} color="inherit">
         <Toolbar>
-          <Typography variant="h6" className={classes.tittle} color="inherit">
-            <img
-              src={logo}
-              alt="Comerc.js"
-              height="40px"
-              className={classes.image}
-            />
-          </Typography>
+         
           <div className={classes.grow} />
           <div className={classes.button}>
             <IconButton
