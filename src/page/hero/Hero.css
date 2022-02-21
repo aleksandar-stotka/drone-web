@@ -25,13 +25,13 @@
     
   }
   
-   .hero-info h3 {
+   .hero-info h3 p {
     font-size: 3rem;
     color: rgb(255, 255, 255);
   }
   .hero h2 {
   
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: var(   --clr-grey-9);
     
   }
@@ -49,6 +49,10 @@
     font-size: 1.2rem;
     outline: none;
     margin: 0.8em;
+  }
+  .title-one {
+    font-size: 3rem;
+    color: bisque;
   }
   .btn-visible:hover {
     box-shadow: inset 300px 0 0 0 green;

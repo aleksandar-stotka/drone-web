@@ -4,10 +4,11 @@
     align-items: center;
     justify-content: space-around;
     background: transparent;
-    
+    color: black;
+    background-color: rgb(36, 94, 110);
     z-index: 1;
-    width: 100%;
-    background-color: rgb(93, 158, 158);
+    width: 90;
+    border-bottom: 2px solid orange;
    
     
    
@@ -15,12 +16,11 @@
   .nav-center {
     width: 100vw;
     max-width: var(--max-width);
+   
     
   }
-  .changeColor {
-    background-color: black;
-  }
-
+ 
+ 
   
   .btn {
     font-size: 1.4rem;
@@ -38,7 +38,7 @@
   }
   .nav-links {
     display: none;
-    
+  
    
     
   }

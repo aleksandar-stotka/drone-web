@@ -16,6 +16,7 @@ import StoreList from "./page/storeList/StoreList";
 import { useGlobalContext } from "./context";
 import Cart from "./components/Cart/Cart";
 import Checkout from "./components/CeckoutForm/checkout/Checkout";
+import AirSeries from "./components/series/AirSeries";
 
 function App() {
   const { user } = useAuthContext();
@@ -40,6 +41,7 @@ function App() {
             <MavicSeries />
           </Route>
         }
+
         <Route path="/store/:id" children={<StoreList />}></Route>
         <Route path="/pagelogin">
           {!user && <Redirect to="/login" />}
@@ -56,6 +58,9 @@ function App() {
         </Route>
         <Route path="/storelist">
           <StoreList navShow={showNavbar} />
+        </Route>
+        <Route path="/air">
+          <AirSeries />
         </Route>
       </Switch>
     </div>

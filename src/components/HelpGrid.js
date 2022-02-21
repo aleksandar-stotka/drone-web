@@ -15,13 +15,13 @@ const HelpGrid = () => {
       <div className="section">
         <div className="dron-center">
           {card.map((item) => {
-            const { id, title, img, descTwo } = item;
+            const { id, title, img } = item;
             return (
               <div className="drones" key={id}>
                 <div className="img-container">
                   <img src={img} alt={title} />
                   <div className="drones-footer">
-                    <h3 className="drone-title">{title}</h3>
+                    <h3 style={{ fontSize: "2rem" }}>{title}</h3>
                     <Link to={`/dron/${id}`} className="btn">
                       show more
                     </Link>

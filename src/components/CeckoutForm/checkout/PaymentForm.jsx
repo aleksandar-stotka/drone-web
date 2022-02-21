@@ -21,6 +21,7 @@ const PaymentForm = ({ checkoutToken, backStep, shippingData ,onCaptureCheckout,
             console.log(error)
         } else {
             const orderData = {
+                
                 line_items: checkoutToken.live.line_items,
                 customer: {
                     firstname: shippingData.firstName, lastname: shippingData.lastName, email: shippingData.email,
