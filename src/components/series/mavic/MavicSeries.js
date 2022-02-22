@@ -74,6 +74,55 @@ const MavicSeries = () => {
           24mm <br></br>Equivalent Focal Length
         </h3>
       </div>
+      <section className="video-desc" style={{ backgroundColor: "black" }}>
+        <h2
+          style={{
+            padding: "2em",
+            width: "50rem",
+            margin: "auto",
+            color: "white",
+          }}
+        >
+          One billion colors captured by the 10-bit Dlog-M color profile of DJI
+          Air <br></br> 2S let you fully immerse yourself in all the hues of
+          your environment.
+        </h2>
+        <div className="video-container">
+          <video autoPlay muted loop>
+            <source
+              src="https://dji-official-fe.djicdn.com/reactor/assets/_next/static/videos/36f6065b-8aa6-478e-835d-43728c60a5d0.webm"
+              type="video/mp4"
+            />
+          </video>{" "}
+          <video autoPlay muted loop>
+            <source
+              src="https://dji-official-fe.djicdn.com/reactor/assets/_next/static/videos/36f6065b-8aa6-478e-835d-43728c60a5d0.webm"
+              type="video/mp4"
+            />
+          </video>
+          <div className="caption"></div>
+        </div>
+        <div className="shoot" style={{ display: "flex", padding: "3em" }}>
+          <div
+            className="desc-shoot"
+            style={{ width: "40rem", padding: "2em", fontWeight: "500" }}
+          >
+            <p style={{ color: "white" }}>
+              Shoot RAW format photos with a dynamic range of up to 12.6 stops
+              to capture more visual information in every scene, even when
+              lighting conditions are bad or complex. <br></br> This provides
+              more flexibility in post-processing, giving creators more
+              possibilities to get the look they want.
+            </p>
+          </div>
+
+          <img
+            style={{ width: "40rem", height: "70vh" }}
+            src="https://dji-official-fe.djicdn.com/dps/962fbb56b47a9ed7cfca09c19835d8da.jpg"
+            alt="shoot"
+          />
+        </div>
+      </section>
     </>
   );
 };

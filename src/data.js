@@ -12,7 +12,7 @@ const sublinks = [
       {
         label: "Air Series",
         img: "https://www1.djicdn.com/cms/uploads/eead2358fecb94ceb86d412f4ca4b67d.png",
-        url: "/airseries",
+        url: "/air",
       },
       {
         label: "Mini Series",

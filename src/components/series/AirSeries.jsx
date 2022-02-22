@@ -23,6 +23,9 @@ const AirSeries = () => {
         <div
           className={`${newBack ? "video-change" || "color-h1" : "content"}`}
         >
+           <div className="inner-text" data-aos="fade-left">
+            <h1>Worry Less, Discover More</h1>
+          </div>
          
           <div className="video-container">
          
