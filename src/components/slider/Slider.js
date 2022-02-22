@@ -55,11 +55,7 @@ const Slider = () => {
 
   return (
     <section className="slider">
-      <div className="title">
-        <h2>
-          <span>/</span>reviews
-        </h2>
-      </div>
+      <div className="title"></div>
       <div className="section-slide">
         {people.map((person, personIndex) => {
           const { id, image, name, title, quote } = person;

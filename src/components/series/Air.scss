@@ -1,0 +1,129 @@
+.header {
+   
+    
+    background-color: black;
+   
+   
+    
+}
+.inner-text {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-30% -30%);
+  width: 50rem;
+  z-index: 1000;
+ 
+}
+ .title-hero {
+      position: absolute;
+      top: 20%;
+      left: 30%;
+      width: 40rem;
+      height: 40vh;
+     
+      text-align: center;
+
+     h1 {
+       font-size: 6rem;
+       letter-spacing: 2px;
+       color: #F0B556;
+     }
+      
+    }
+    .title  {
+      opacity: 0;
+
+    }
+.video-container {
+  height: 70vh;
+  width: 80%;
+  position: relative;
+ 
+  margin: auto;
+  
+}
+.change-backround {
+  background-color: black;
+  width: 70rem;
+  height: auto;
+}
+.video-change {
+  opacity: 0;
+  transition: ease-in 0.4s;
+  position: relative;
+
+  
+}
+h1 {
+ 
+  color: #1a0a57;
+  font-size: 3rem;
+}
+  
+
+.video-container video {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Just styling the content of the div, the *magic* in the previous rules */
+.video-container .caption {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  color: #f5ebeb;
+  top: 40%;
+  padding: 10px;
+}
+.air-desc {
+  display: flex;
+  justify-content: space-around;
+   padding: 2em;
+   align-items: center;
+   text-align: center;
+}
+.description {
+  background-color: black;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  p {
+    color: white;
+    padding: 5em;
+    font-size: 2rem;
+    letter-spacing: 1px;
+   font-weight: bold;
+  }
+  .parametars {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+     h2 {
+       color: #F0B556;
+     }
+     h3 {
+       color: #f5ebeb;
+       padding: 1 bem;
+     }
+  }
+  
+}
+.dron-desc {
+  width: 100%;
+  background-color: black;
+  color: orange;
+  display: grid;
+   grid-template-columns: repeat(2 ,1fr);
+   padding: 3em;
+  height: 40vh;
+  align-items: center;
+  text-align: center;
+  h3 {
+    letter-spacing: 2px;
+    
+  }
+}

@@ -7,6 +7,7 @@ import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 import { AiOutlineCheck } from "react-icons/ai";
 import { AiFillPlayCircle } from "react-icons/ai";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const dron =
   "https://climacell-microweather-v1.p.rapidapi.com/weather/forecast/hourly?lat=42.8237618&lon=-71.2216286&fields=precipitation";
@@ -32,6 +33,10 @@ const Hero = () => {
             >
               Watch Video <AiFillPlayCircle />{" "}
             </button>
+
+            <Link className="btn" to="/storelist">
+              Store <AiOutlineShoppingCart />
+            </Link>
 
             <div className="log-content"></div>
           </div>

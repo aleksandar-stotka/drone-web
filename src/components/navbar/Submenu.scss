@@ -12,6 +12,7 @@
     transition: var(--transition);
     
   }
+ 
   .submenu::before {
     content: '';
     display: block;
@@ -54,8 +55,10 @@
   .submenu-center a {
     width: 10rem;
     display: block;
-    color: var(--clr-grey-1);
     text-transform: capitalize;
+    background-color: white;
+    color: black;
+    font-weight: 500;
     display: flex;
     align-items: center;
   }

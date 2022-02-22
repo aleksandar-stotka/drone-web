@@ -9,13 +9,38 @@
     z-index: 1;
     width: 90;
     border-bottom: 2px solid orange;
+     font-family: 'Montserrat', sans-serif;
+     h2 {
+       color: aliceblue;
+     }
+
    
     
    
   }
+   .log-links a {
+        text-decoration: none;
+      color: red;
+      font-size: 1.4rem;
+      font-weight: 800;
+      
+    }
+   
   .nav-center {
     width: 100vw;
     max-width: var(--max-width);
+    li {
+      list-style: none;
+      color: aliceblue;
+    }
+    a {
+      text-decoration: none;
+      color: red;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+   
+
    
     
   }

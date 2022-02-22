@@ -60,6 +60,9 @@ const Navbar = () => {
           <button className="btn toggle-btn" onClick={openSidebar}>
             <FaBars />
           </button>
+          <li>
+            <Link to="/">HOME</Link>
+          </li>
         </div>
         <ul className="nav-links">
           <li>
@@ -72,34 +75,24 @@ const Navbar = () => {
               Specialized
             </button>
           </li>
-          <li>
-            <button className="link-btn" onMouseOver={displaySubmenu}>
-              company
-            </button>
-          </li>
         </ul>
       </div>
-      {!user && (
-        <>
-          <Link to="/login" className="btn">
-            login
-          </Link>
-          <Link to="/singup" className="btn">
-            SingUp
-          </Link>
-        </>
-      )}
+      <div className="log-links">
+        {!user && (
+          <>
+            <Link to="/login">login</Link>
+            <Link to="/singup">SingUp</Link>
+          </>
+        )}
+      </div>
       {user && (
         <>
-          <li>heloo {user.displayName} </li>
+          <h2>heloo {user.displayName}</h2>{" "}
           <button className="btn" onClick={logout}>
             Logout
           </button>
         </>
       )}
-      <Link className="btn" to="/storelist">
-        Store
-      </Link>
     </nav>
   );
 };
