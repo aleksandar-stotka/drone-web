@@ -17,10 +17,10 @@ const InfoGrid = () => {
     setImage(newImage.img);
   }, []);
   return (
-    <div className="container">
+    <div style={{ width: "60rem", margin: "auto" }}>
       <p>{video}</p>
       <h2>{title}</h2>
-      <img src={image} alt="img" />
+      <img src={image} alt="img" style={{ width: "30rem" }} />
     </div>
   );
 };
