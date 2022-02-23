@@ -26,7 +26,8 @@ Variables
     background: rgba(0, 0, 0, 0.5);
     display: grid;
     place-items: center;
-    transition: var(--transition);
+    transition: ease-in 0.4s;
+
     visibility: hidden;
     z-index: -1;
   }
@@ -46,6 +47,8 @@ Variables
     display: grid;
     place-items: center;
     position: relative;
+        transition: ease-in 0.4s;
+
   }
   .close-modal-btn {
     position: absolute;

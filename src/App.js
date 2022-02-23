@@ -18,6 +18,7 @@ import Cart from "./components/Cart/Cart";
 import Checkout from "./components/CeckoutForm/checkout/Checkout";
 import AirSeries from "./components/series/AirSeries";
 import MiniSeries from "./components/series/mavic/MiniSeries";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const { user } = useAuthContext();
@@ -67,6 +68,7 @@ function App() {
           <MiniSeries />
         </Route>
       </Switch>
+      <Footer />
     </div>
   );
 }

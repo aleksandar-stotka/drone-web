@@ -33,7 +33,7 @@ import { useState } from 'react'
 
     const FilledCart = () => (
         <>
-            <Grid container spacing={3}> 
+            <Grid container spacing={3} > 
                 {cart.line_items.map((item) => (
                     <Grid item xs={12} sm={4} key={item.id}>
                         <CartItem item={item}  onUpdateCartQty={handleUpdatedCartQty}  onRemoveFromCart={  handleRemoveFromCart} />
@@ -42,7 +42,7 @@ import { useState } from 'react'
                     
                 ))}
             </Grid>  
-                <div className={classes.cardDetails}>
+                <div className={classes.cardDetails} style={{padding: '2em'}}>
                             <Typography variant='h4'>
                                 Subtotal: {cart.subtotal.formatted_with_symbol}
                             </Typography>

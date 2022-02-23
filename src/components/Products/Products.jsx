@@ -8,7 +8,7 @@ const Products = ({ products, onAddToCart }) => {
      
     return(
         <main>
-            <Grid container justify='center' style={{ padding: '15px 0' }}   gutterBottom  spacing={5}>
+            <Grid container  style={{ padding: '30px', textAlign: 'center' }}   gutterBottom  spacing={5}>
                 {products.map(product => (
                     <Grid item key={product.id} xs={12} sm={6} md={4} lg={3}>
                         <Product product={product} onAddToCart={ onAddToCart}/>    

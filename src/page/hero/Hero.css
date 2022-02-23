@@ -12,9 +12,7 @@
    
    
   }
-  .para {
-    font-size: 2rem;
-  }
+ 
   .hero {
     
     min-height: 80vh;
@@ -25,16 +23,8 @@
     
   }
   
-   .hero-info h3 p {
-    font-size: 3rem;
-    color: rgb(255, 255, 255);
-  }
-  .hero h2 {
   
-    font-size: 3.5rem;
-    color: var(   --clr-grey-9);
-    
-  }
+  
 
   
   .btn-visible {
@@ -75,15 +65,10 @@
     background: rgb(36, 94, 110);
   }
   .hero-center {
-    width: 100%;
-    padding: 4em;
-    max-width: var(--max-width);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
     position: absolute;
-    top: 30%;
-    right:1%;
+    top: 40%;
+    right:0%;
     
   }
   .log-content {
@@ -93,19 +78,7 @@
     justify-content: center;
   }
  
-  .hero-three {
-    width: 100%;
-    height: 20vh;
-    background-color:var(--clr-primary-1) ;
-    color:white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 1px;
-    font-size: 1.6rem;
-    
-  }
+  
   
   .inner-hero {
    max-width: var(--max-width);
@@ -138,19 +111,9 @@
     
   }
   
-  .hero-info h1 {
-    text-transform: none;
-    max-width: 500px;
-    margin-bottom: 2rem;
-  }
-  .hero-info p {
-    max-width: 35em;
-    line-height: 1.8;
-  }
-  .hero-images {
-    display: none;
-   
-  }
+  
+ 
+ 
   @media screen and (min-width: 1400px) {
     .hero-center {
       padding-bottom: 20vh;

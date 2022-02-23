@@ -22,9 +22,12 @@ const Hero = () => {
   return (
     <>
       <section className="hero" onMouseOver={closeSubmenu}>
-        <div className="hero-center">
+        <div
+          className="hero-center"
+          style={{ width: "70rem", margin: "0 auto" }}
+        >
           <div className="hero-info" data-aos="fade-up">
-            <h2>DJI MAVIC 3</h2>
+            <h2 style={{ fontSize: "4.4rem", color: "white" }}>DJI MAVIC 3</h2>
 
             <button
               data-aos="fade-top"
@@ -43,8 +46,20 @@ const Hero = () => {
         </div>
       </section>
 
-      <div className="hero-three">
-        <h3>Explore DJI Products in Different Fields</h3>
+      <div
+        style={{
+          width: "100%",
+          height: "30vh",
+          backgroundColor: "#f0f7f2",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          letterSpacing: "2px",
+        }}
+      >
+        <h3 style={{ fontSize: "1,8rem" }}>
+          Explore DJI Products in Different Fields
+        </h3>
         <AiOutlineCheck className="icons" />
         5X increase in reach <AiOutlineCheck className="icons" />
         7x increase in conversation rate
