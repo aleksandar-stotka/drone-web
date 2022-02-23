@@ -17,6 +17,7 @@ import { useGlobalContext } from "./context";
 import Cart from "./components/Cart/Cart";
 import Checkout from "./components/CeckoutForm/checkout/Checkout";
 import AirSeries from "./components/series/AirSeries";
+import MiniSeries from "./components/series/mavic/MiniSeries";
 
 function App() {
   const { user } = useAuthContext();
@@ -61,6 +62,9 @@ function App() {
         </Route>
         <Route path="/air">
           <AirSeries />
+        </Route>
+        <Route path="/mini">
+          <MiniSeries />
         </Route>
       </Switch>
     </div>

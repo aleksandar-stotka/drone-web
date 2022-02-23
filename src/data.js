@@ -17,7 +17,7 @@ const sublinks = [
       {
         label: "Mini Series",
         img: "https://www1.djicdn.com/cms/uploads/a66438eb1dd2feadb16f08c47461a741.png",
-        url: "/products",
+        url: "/mini",
       },
       {
         label: "DJI FPV Series",
@@ -29,8 +29,8 @@ const sublinks = [
   {
     page: "Specialized",
     links: [
-      { label: "Mini Series", icon: <FaBook />, url: "/products" },
-      { label: "libraries", icon: <FaBook />, url: "/products" },
+      { label: "Mini Series", icon: <FaBook />, url: "/mini" },
+      { label: "libraries", icon: <FaBook />, url: "/mini" },
     ],
   },
   {

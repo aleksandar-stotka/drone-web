@@ -1,5 +1,4 @@
 import React from "react";
-import "./Mavic.scss";
 import { useState, useEffect } from "react";
 
 import Aos from "aos";
@@ -7,7 +6,7 @@ import "aos/dist/aos.css";
 import { useGlobalContext } from "../../../context";
 import icons from "../../../data/icons";
 
-const MavicSeries = () => {
+const MiniSeries = () => {
   const { closeSubmenu, newBack } = useGlobalContext();
   const [icon, setIcon] = useState(icons);
 
@@ -26,13 +25,13 @@ const MavicSeries = () => {
           <div className="video-container">
             <video autoPlay muted loop>
               <source
-                src="https://dji-official-fe.djicdn.com/reactor/assets/_next/static/videos/1f55dbc7-acf1-43ae-b37a-cd47e1e9bb07.mp4"
+                src="https://dji-official-fe.djicdn.com/assets/uploads/v/3f3966ba22afd5b1b87aa6bfa7ecafa2.mp4"
                 type="video/mp4"
               />
             </video>{" "}
             <video autoPlay muted loop>
               <source
-                src="https://dji-official-fe.djicdn.com/reactor/assets/_next/static/videos/1f55dbc7-acf1-43ae-b37a-cd47e1e9bb07.mp4"
+                src="https://dji-official-fe.djicdn.com/assets/uploads/v/3f3966ba22afd5b1b87aa6bfa7ecafa2.mp4"
                 type="video/mp4"
               />
             </video>
@@ -41,7 +40,9 @@ const MavicSeries = () => {
         </div>
       </header>
       <div className={`${newBack ? "title-hero" : "title"}`}>
-        <h1>Seeing is Believing</h1>
+        <h1 style={{ fontSize: "2.3rem", padding: "2em" }}>
+          DJI Mini Drones <br></br> Which DJI Mini Drone is Right for You?
+        </h1>
       </div>
 
       <div>
@@ -85,18 +86,10 @@ const MavicSeries = () => {
           your environment.
         </h2>
         <div className="video-container">
-          <video autoPlay muted loop>
-            <source
-              src="https://dji-official-fe.djicdn.com/reactor/assets/_next/static/videos/36f6065b-8aa6-478e-835d-43728c60a5d0.webm"
-              type="video/mp4"
-            />
-          </video>{" "}
-          <video autoPlay muted loop>
-            <source
-              src="https://dji-official-fe.djicdn.com/reactor/assets/_next/static/videos/36f6065b-8aa6-478e-835d-43728c60a5d0.webm"
-              type="video/mp4"
-            />
-          </video>
+          <img
+            src="https://dji-official-fe.djicdn.com/dps/5ded07d214f069b4080c767ef8c14d05.jpg"
+            alt="mini"
+          />
           <div className="caption"></div>
         </div>
         <div className="shoot" style={{ display: "flex", padding: "3em" }}>
@@ -104,15 +97,16 @@ const MavicSeries = () => {
             className="desc-shoot"
             style={{ width: "40rem", padding: "2em", fontWeight: "500" }}
           >
-            <p style={{ color: "white" }}>
-              Always end on a high note with Advanced RTH. This updated
-              auto-return function enables Mavic 3 to automatically determine
-              the optimal route back to its home point and execute it quickly.
-              The secret to incredible HDR video is a high-performance Quad
-              Bayer image sensor. A single frame separates exposure levels in
-              different areas, accurately capturing light and dark details. The
-              images are layered to create a colorful, balanced, and
-              eye-catching picture with higher dynamic range.
+            <p style={{ color: "white", padding: "3em", fontWeight: "700" }}>
+              The 48MP camera supports a high megapixel count that allows for
+              vivid details even when you zoom in on an image. Make any moment
+              fly with DJI Mini 2! Compact and ultralight at just 249 g, it
+              offers a 31-minute max flight time, super-smooth 4K video, 4x
+              zoom, and a whole lot more. Try QuickShots for intelligent
+              automatic flight maneuvers that give you professional-looking
+              videos with one tap. Compact and unbelievably intuitive, DJI Mini
+              2 offers a fun, unforgettable flight experience every time you
+              take off.
             </p>
           </div>
 
@@ -127,4 +121,4 @@ const MavicSeries = () => {
   );
 };
 
-export default MavicSeries;
+export default MiniSeries;

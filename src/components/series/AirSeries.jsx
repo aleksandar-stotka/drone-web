@@ -70,6 +70,41 @@ const AirSeries = () => {
          2.4um <br></br>Pixels
         </h3>
       </div>
+       <div className="video-container" style={{backgroundColor: 'black', width:"100%"}}>
+          <video autoPlay muted loop>
+            <source
+              src="https://dji-official-fe.djicdn.com/reactor/assets/_next/static/videos/52263be6-af89-428f-92c1-5158ad807d65.mp4"
+              type="video/mp4"
+            />
+          </video>{" "}
+          <video autoPlay muted loop>
+            <source
+              src="https://dji-official-fe.djicdn.com/reactor/assets/_next/static/videos/52263be6-af89-428f-92c1-5158ad807d65.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div className="caption"></div>
+        </div>
+      <div className="shoot" style={{ display: "flex", padding: "3em" , backgroundColor: 'black'}}>
+          <div
+            className="desc-shoot"
+            style={{ width: "40rem", padding: "2em", fontWeight: "500" }}
+          >
+            <p style={{ color: "white",fontSize:'1.4rem' }}>
+              Shoot RAW format photos with a dynamic range of up to 12.6 stops
+              to capture more visual information in every scene, even when
+              lighting conditions are bad or complex. <br></br> This provides
+              more flexibility in post-processing, giving creators more
+              possibilities to get the look they want.
+            </p>
+          </div>
+
+          <img
+            style={{ width: "40rem", height: "70vh" }}
+            src="https://dji-official-fe.djicdn.com/dps/962fbb56b47a9ed7cfca09c19835d8da.jpg"
+            alt="shoot"
+          />
+        </div>
     </>
   );
 };
