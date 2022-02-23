@@ -4,10 +4,9 @@
     align-items: center;
     justify-content: space-around;
     background: transparent;
-    color: black;
-    background-color: rgb(36, 94, 110);
+    
+    background-color:#939393;
     z-index: 1;
-    width: 90;
     border-bottom: 2px solid orange;
      font-family: 'Montserrat', sans-serif;
      h2 {
@@ -20,9 +19,9 @@
   }
    .log-links a {
         text-decoration: none;
-      color: red;
-      font-size: 1.4rem;
-      font-weight: 800;
+      color: rgb(250, 133, 0);
+      font-size: 2rem;
+      font-weight:700 ;
       
     }
    
@@ -31,7 +30,7 @@
     max-width: var(--max-width);
     li {
       list-style: none;
-      color: aliceblue;
+    
     }
     a {
       text-decoration: none;
@@ -47,17 +46,6 @@
  
  
   
-  .btn {
-    font-size: 1.4rem;
-    padding: 0.25rem 0.75rem;
-    border-radius: var(--radius);
-    border-color: transparent;
-    color: white;
-    background: var(--clr-red-dark);
-    cursor: pointer;
-    transition: var(--transition);
-    margin-top: 3em;
-  }
   .btn:hover {
     background: var(--clr-grey-5);
   }
@@ -67,9 +55,7 @@
    
     
   }
-  .signin-btn {
-    display: none;
-  }
+ 
   .dron-img {
     width: 50px;
     height: 39px;

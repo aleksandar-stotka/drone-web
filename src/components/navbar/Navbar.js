@@ -61,17 +61,49 @@ const Navbar = () => {
             <FaBars />
           </button>
           <li>
-            <Link to="/">HOME</Link>
+            <Link
+              style={{
+                background: "none",
+                color: "rgb(250, 133, 0)",
+                fontSize: "2rem",
+              }}
+              to="/"
+            >
+              HOME
+            </Link>
           </li>
         </div>
         <ul className="nav-links">
           <li>
-            <button className="link-btn" onMouseOver={displaySubmenu}>
+            <button
+              style={{
+                color: "white",
+                letterSpacing: "2px",
+
+                outline: "none",
+                background: "none",
+                fontSize: "1.3rem",
+                border: "none",
+              }}
+              onMouseOver={displaySubmenu}
+            >
               Search Models
             </button>
           </li>
           <li>
-            <button className="link-btn" onMouseOver={displaySubmenu}>
+            <button
+              style={{
+                color: "white",
+                letterSpacing: "2px",
+                margin: "0",
+
+                outline: "none",
+                background: "none",
+                fontSize: "1.3rem",
+                border: "none",
+              }}
+              onMouseOver={displaySubmenu}
+            >
               Specialized
             </button>
           </li>
@@ -80,8 +112,12 @@ const Navbar = () => {
       <div className="log-links">
         {!user && (
           <>
-            <Link to="/login">login</Link>
-            <Link to="/singup">SingUp</Link>
+            <Link style={{ background: "none" }} to="/login">
+              login
+            </Link>
+            <Link style={{ background: "none" }} to="/singup">
+              SingUp
+            </Link>
           </>
         )}
       </div>

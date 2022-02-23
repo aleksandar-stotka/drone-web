@@ -5,7 +5,7 @@
    
     
    
-    background-image:  -webkit-linear-gradient(hsl(206, 68%, 9%), rgba(24, 108, 173, 0.7)), url(../../images/dronpeople.jpg);
+    background-image:  -webkit-linear-gradient(hsl(206, 63%, 25%), rgba(163, 86, 23, 0.7)), url(../../images/dronpeople.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     
@@ -68,7 +68,7 @@
     
     position: absolute;
     top: 40%;
-    right:0%;
+    right: 0;
     
   }
   .log-content {
@@ -80,29 +80,7 @@
  
   
   
-  .inner-hero {
-   max-width: var(--max-width);
-   margin: auto;
-   margin-top: 2em;
-  }
-  .img-comercial {
-    width: 10rem;
-    height: 20vh;
-    margin: 1em 1em;
-    border-radius: 50%;
-    
-  
-  
-  }
-  .icon {
-    width: 8rem;
-    height: 10vh;
-    display: block;
-    background-color: var(--clr-primary-2);
-    border-radius: 50%;
-    color:white;
-    padding: 0.3em;
-  }
+
   .images {
     display: flex;
     justify-content: center;

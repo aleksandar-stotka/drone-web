@@ -12,7 +12,7 @@ const HelpGrid = () => {
   }, []);
   return (
     <>
-      <div className="section">
+      <div className="section" style={{ borderBottom: "3px solid orange" }}>
         <div className="dron-center">
           {card.map((item) => {
             const { id, title, img } = item;
@@ -22,9 +22,6 @@ const HelpGrid = () => {
                   <img src={img} alt={title} />
                   <div className="drones-footer">
                     <h3 style={{ fontSize: "2rem" }}>{title}</h3>
-                    <Link to={`/dron/${id}`} className="btn">
-                      show more
-                    </Link>
                   </div>
                 </div>
               </div>

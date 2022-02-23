@@ -29,7 +29,7 @@ const grid = [
   {
     id: 4,
     icon: <FaRocket className="icon" />,
-    title: "matrice 300 rtk",
+    title: "Matrice 300 rtk",
 
     img: "https://topodrone.org/upload/iblock/a77/M200%20LIDAR%2002.jpg",
   },

@@ -24,7 +24,7 @@ const Hero = () => {
       <section className="hero" onMouseOver={closeSubmenu}>
         <div
           className="hero-center"
-          style={{ width: "70rem", margin: "0 auto" }}
+          style={{ width: "40rem", margin: "0 auto" }}
         >
           <div className="hero-info" data-aos="fade-up">
             <h2 style={{ fontSize: "4.4rem", color: "white" }}>DJI MAVIC 3</h2>
@@ -37,7 +37,16 @@ const Hero = () => {
               Watch Video <AiFillPlayCircle />{" "}
             </button>
 
-            <Link className="btn" to="/storelist">
+            <Link
+              className="btn"
+              to="/storelist"
+              style={{
+                background: "none",
+                fontSize: "2rem",
+                color: "white",
+                fontWeight: "800",
+              }}
+            >
               Store <AiOutlineShoppingCart />
             </Link>
 
@@ -50,21 +59,24 @@ const Hero = () => {
         style={{
           width: "100%",
           height: "30vh",
-          backgroundColor: "#f0f7f2",
+          backgroundColor: "#e3d0b8",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           letterSpacing: "2px",
+          padding: "2em",
         }}
       >
-        <h3 style={{ fontSize: "1,8rem" }}>
+        <h3 style={{ fontSize: "1.5rem" }}>
           Explore DJI Products in Different Fields
         </h3>
-        <AiOutlineCheck className="icons" />
-        5X increase in reach <AiOutlineCheck className="icons" />
-        7x increase in conversation rate
-        <AiOutlineCheck className="icons" /> 80% less calls needed for better
-        results
+        <h4 style={{ fontSize: "1.5rem", color: "white", fontWeight: "800" }}>
+          <AiOutlineCheck className="icons" />
+          5X increase in reach <AiOutlineCheck className="icons" />
+          7x increase in conversation rate
+          <AiOutlineCheck className="icons" /> 80% less calls needed for better
+          results
+        </h4>
       </div>
     </>
   );

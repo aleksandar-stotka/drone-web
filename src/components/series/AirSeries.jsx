@@ -24,7 +24,7 @@ const AirSeries = () => {
           className={`${newBack ? "video-change" || "color-h1" : "content"}`}
         >
            <div className="inner-text" data-aos="fade-left">
-            <h1>Worry Less, Discover More</h1>
+            <h1 style={{color:"wheat", fontSize: '4rem'}}>Worry Less, Discover More</h1>
           </div>
          
           <div className="video-container">
@@ -40,7 +40,7 @@ const AirSeries = () => {
         </div>
       </header>
       <div className={`${newBack ? "title-hero" : "title"}`}>
-        <h1>Big World, Big Sensor</h1>
+        <h1 style={{color:"rgb(250, 133, 0)"}}>Big World, Big Sensor</h1>
       </div>
 
       <div>
