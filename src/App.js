@@ -19,6 +19,7 @@ import Checkout from "./components/CeckoutForm/checkout/Checkout";
 import AirSeries from "./components/series/AirSeries";
 import MiniSeries from "./components/series/mavic/MiniSeries";
 import Footer from "./components/footer/Footer";
+import DjiSeries from "./components/series/DjiSeres";
 
 function App() {
   const { user } = useAuthContext();
@@ -66,6 +67,9 @@ function App() {
         </Route>
         <Route path="/mini">
           <MiniSeries />
+        </Route>
+        <Route path="/dji">
+          <DjiSeries />
         </Route>
       </Switch>
       <Footer />
