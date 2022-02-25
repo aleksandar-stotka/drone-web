@@ -94,7 +94,9 @@ const AddressForm = ({ checkoutToken, next ,hideCheck}) => {
          <Box  sx={{
     display: 'grid',
     gap: 20,
-    gridTemplateColumns: 'repeat(2, 1fr)',
+          gridTemplateColumns: 'repeat(2, 1fr)',
+    width: '50rem'
+    
   }}>
 
              <TextField required name="firstName" label="First name" />

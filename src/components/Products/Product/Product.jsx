@@ -31,7 +31,8 @@ const Product = ({ product,onAddToCart }) => {
 
                 </CardActions>
                 
-        </Card>
+            </Card>
+     
   </div>
       
   ) 

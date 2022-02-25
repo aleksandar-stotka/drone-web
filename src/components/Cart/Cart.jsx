@@ -36,7 +36,7 @@ import { useState } from 'react'
             <Grid container spacing={3} > 
                 {cart.line_items.map((item) => (
                     <Grid item xs={12} sm={4} key={item.id}>
-                        <CartItem item={item}  onUpdateCartQty={handleUpdatedCartQty}  onRemoveFromCart={  handleRemoveFromCart} />
+                        {<CartItem item={item}  onUpdateCartQty={handleUpdatedCartQty}  onRemoveFromCart={  handleRemoveFromCart} />}
 
                     </Grid>
                     
