@@ -89,13 +89,13 @@ const DjiSeres = () => {
         <div className="video-container">
           <video autoPlay muted loop>
             <source
-              src="https://dji-official-fe.djicdn.com/reactor/assets/_next/static/videos/36f6065b-8aa6-478e-835d-43728c60a5d0.webm"
+              src="https://dji-official-fe.djicdn.com/reactor/assets/_next/static/videos/7da6f970-0934-46e1-ab3d-e0ca3211971f.webm"
               type="video/mp4"
             />
           </video>{" "}
           <video autoPlay muted loop>
             <source
-              src="https://dji-official-fe.djicdn.com/reactor/assets/_next/static/videos/36f6065b-8aa6-478e-835d-43728c60a5d0.webm"
+              src="https://dji-official-fe.djicdn.com/reactor/assets/_next/static/videos/7da6f970-0934-46e1-ab3d-e0ca3211971f.webm"
               type="video/mp4"
             />
           </video>
@@ -107,14 +107,9 @@ const DjiSeres = () => {
             style={{ width: "40rem", padding: "2em", fontWeight: "500" }}
           >
             <p style={{ color: "white" }}>
-              Always end on a high note with Advanced RTH. This updated
-              auto-return function enables Mavic 3 to automatically determine
-              the optimal route back to its home point and execute it quickly.
-              The secret to incredible HDR video is a high-performance Quad
-              Bayer image sensor. A single frame separates exposure levels in
-              different areas, accurately capturing light and dark details. The
-              images are layered to create a colorful, balanced, and
-              eye-catching picture with higher dynamic range.
+              DJI FPV stands out in more ways than one. Sporting front LEDs and
+              aircraft arm lights with customizable-color, DJI FPV allows pilots
+              to make their aircraft as unique as they are.
             </p>
           </div>
 

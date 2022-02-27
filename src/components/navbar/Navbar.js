@@ -124,7 +124,17 @@ const Navbar = () => {
       {user && (
         <>
           <h2>heloo {user.displayName}</h2>{" "}
-          <button className="btn" onClick={logout}>
+          <button
+            style={{
+              padding: "0.6em",
+              backgroundColor: "green",
+              color: "white",
+              cursor: "pointer",
+              fontSize: "1em",
+              borderRadius: "40%",
+            }}
+            onClick={logout}
+          >
             Logout
           </button>
         </>

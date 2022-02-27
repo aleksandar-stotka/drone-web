@@ -22,7 +22,7 @@ const sublinks = [
       {
         label: "DJI FPV Series",
         img: "https://www1.djicdn.com/cms/uploads/e35a7f7b0b9a99891025a20ac497ca43.png",
-        url: "/products",
+        url: "/dji",
       },
     ],
   },

@@ -25,7 +25,7 @@ import { useState } from 'react'
         }
        
     const EmptyCart = () => (
-        <Typography variant="subtitle1" >You have no items in your shopping cart, start adding some!
+        <Typography style={{height: '50rem'}} variant="subtitle1" >You have no items in your shopping cart, start adding some!
           <Button onClick={showCheck}>Back to products</Button>
         
         </Typography>

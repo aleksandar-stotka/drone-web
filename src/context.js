@@ -18,7 +18,7 @@ export const AppProvider = ({ children }) => {
     try {
       setTimeout(() => {
         setNewBack(true);
-      }, 3500);
+      }, 4000);
     } catch (err) {
       console.log(err);
     }
