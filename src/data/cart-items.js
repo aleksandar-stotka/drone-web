@@ -1,23 +1,30 @@
-export default [
+import React from "react";
+
+const items = [
   {
-    id: 1,
-    title: "Mavic Series",
-    price: 599.99,
-    img: "https://www.bhphotovideo.com/images/images2500x2500/dji_cp_pt_00000104_01_spark_quadcopter_controller_combo_1422795.jpg",
-    amount: 1,
+    img: "https://dji-official-fe.djicdn.com/dps/fec9f0daf07a8b086c86305c6d7852bf.svg",
+    title: "1-inch CMOS Sensor",
   },
   {
-    id: 2,
-    title: "google pixel ",
-    price: 499.99,
-    img: "https://www.tienda24hs.com/WebRoot/StoreES/Shops/62148069/5ACC/6EFD/F333/A7DA/A3F9/0A0C/6D00/0ED6/18037-Dron-Mavic-Air-Negro-A-Tienda24hs.JPG",
-    amount: 1,
+    img: "https://dji-official-fe.djicdn.com/dps/880dfd1e2d657c3975a2305f395ae6e8.svg",
+    title: "Seeing is Believingr",
   },
   {
-    id: 3,
-    title: "DJI fpv",
-    price: 699.99,
-    img: "https://china-gadgets.com/app/uploads/2021/03/DJI_FPV_Combo_Drone-734x508.jpg",
-    amount: 1,
+    img: "https://dji-official-fe.djicdn.com/dps/92f99641ea055ef8673fe4e434547736.svg",
+    title: "MasterShots",
+  },
+  {
+    img: "https://dji-official-fe.djicdn.com/dps/92f99641ea055ef8673fe4e434547736.svg",
+    title: "5.4K Video",
+  },
+  {
+    img: "https://dji-official-fe.djicdn.com/dps/1f9e0fc8b17a75b3caa34a64debcdd89.svg",
+    title: "12km FHD Transmission",
+  },
+  {
+    img: "https://dji-official-fe.djicdn.com/dps/721bd6f90c331dc64abfbd4b4838c5c6.svg",
+    title: "Obstacle Sensing in 4 Directions",
   },
 ];
+
+export default items;
