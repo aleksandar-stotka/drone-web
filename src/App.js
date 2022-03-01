@@ -20,6 +20,7 @@ import AirSeries from "./components/series/AirSeries";
 import MiniSeries from "./components/series/mavic/MiniSeries";
 import Footer from "./components/footer/Footer";
 import DjiSeries from "./components/series/DjiSeres";
+import VideoProduction from "./components/videoProduction/VideoProduction";
 
 function App() {
   const { user } = useAuthContext();
@@ -70,6 +71,9 @@ function App() {
         </Route>
         <Route path="/dji">
           <DjiSeries />
+        </Route>
+        <Route path="/video">
+          <VideoProduction />
         </Route>
       </Switch>
       <Footer />

@@ -12,7 +12,11 @@ function ExploreProducts() {
       </div>
       <div
         className="container"
-        style={{ width: "100%", height: "70vh", padding: "4em" }}
+        style={{
+          width: "100%",
+          height: "70vh",
+          padding: "4em",
+        }}
       >
         <div
           className="row"
@@ -24,7 +28,8 @@ function ExploreProducts() {
             textAlign: "center",
           }}
         >
-          <div
+          <Link
+            to="video"
             className="img-drone"
             style={{
               width: "30rem",
@@ -40,8 +45,8 @@ function ExploreProducts() {
             }}
           >
             <h1 style={{ padding: "2em", color: "white" }}>Video </h1>
-          </div>
-          <div
+          </Link>
+          <Link
             className="img-drone"
             style={{
               width: "30rem",
@@ -55,11 +60,11 @@ function ExploreProducts() {
               backgroundSize: "cover",
             }}
           >
-            <h1 style={{ padding: "2em", color: "white" }}>Enterprise</h1>
+            <h1 style={{ padding: "2em", color: "white" }}>Agriculture</h1>
             <Link>SHOW MORE</Link>
-          </div>
+          </Link>
 
-          <div
+          <Link
             className="img-drone"
             style={{
               width: "30rem",
@@ -72,9 +77,9 @@ function ExploreProducts() {
               backgroundSize: "cover",
             }}
           >
-            <h1 style={{ padding: "2em", color: "white" }}>Agriculture</h1>
+            <h1 style={{ padding: "2em", color: "white" }}>Enterprise</h1>
             <Link>SHOW MORE</Link>
-          </div>
+          </Link>
         </div>
       </div>
     </>
