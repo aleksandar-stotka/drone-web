@@ -3,6 +3,7 @@ import HelpGrid from "../components/HelpGrid";
 import Hero from "./hero/Hero";
 import Modal from "../components/modal/Modal";
 import Slider from "../components/slider/Slider";
+import ExploreProducts from "../components/Explore/ExploreProducts";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Modal />
 
       <HelpGrid />
+      <ExploreProducts />
 
       <Slider />
     </div>

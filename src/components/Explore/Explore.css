@@ -1,0 +1,24 @@
+.img-drone {
+     z-index: 20;
+     position: relative;
+    width: 100%;
+    height: auto;
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+     overflow: hidden;
+    
+    margin: 0;
+    
+    
+     
+
+}
+.img-drone:hover{
+     
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+}
