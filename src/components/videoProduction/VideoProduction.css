@@ -1,0 +1,27 @@
+
+.video-container video {
+  width: 90%;
+  height: 89%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Just styling the content of the div, the *magic* in the previous rules */
+.video-container .caption {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  color: #f5ebeb;
+  top: 40%;
+  padding: 10px;
+}
+.video-container {
+  height: 80vh;
+  width: 100%;
+  position: relative;
+  padding: 4em;
+  margin: auto;
+  background-color:  -webkit-linear-gradient(hsl(206, 68%, 9%), rgba(24, 108, 173, 0.7),);
+  
+}

@@ -34,6 +34,9 @@ Variables
       height: 50vh;
       padding: 2em;
       width: 100%;
+      position: absolute;
+      right: 0%;
+      
 
       
   }
@@ -46,6 +49,14 @@ Variables
   .title-slide {
     margin-bottom: 1em;
     font-size: 1.5rem;
+  }
+  .slider-hero {
+      position: absolute;
+      top: 30%;
+      left: 20%;
+      color: aqua;
+      font-size: 3rem;
+      font-weight: 800;
   }
   .title span {
     font-size: 0.85em;
@@ -73,6 +84,9 @@ Variables
     object-fit: cover;
     border: 4px solid var(--clr-grey-8);
     box-shadow: var(--dark-shadow);
+ 
+    
+    
   }
   article h4 {
     text-transform: uppercase;

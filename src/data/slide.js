@@ -11,7 +11,7 @@ const people = [
   {
     id: 2,
     image:
-      "https://images.pexels.com/photos/4129857/pexels-photo-4129857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/818819/pexels-photo-818819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     name: "john doe",
     title: "regular guy",
     quote:
@@ -20,20 +20,11 @@ const people = [
   {
     id: 3,
     image:
-      "https://images.pexels.com/photos/4183523/pexels-photo-4183523.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/8657080/pexels-photo-8657080.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     name: "peter smith",
     title: "product designer",
     quote:
       "Drinking vinegar polaroid street art echo park, actually semiotics next level butcher master cleanse hammock flexitarian ethical paleo.",
-  },
-  {
-    id: 4,
-    image:
-      "https://images.pexels.com/photos/3619918/pexels-photo-3619918.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-    name: "susan andersen",
-    title: "the boss",
-    quote:
-      "Marfa af yr 3 wolf moon kogi, readymade distillery asymmetrical seitan kale chips fingerstache cloud bread mustache twee messenger bag. ",
   },
 ];
 
