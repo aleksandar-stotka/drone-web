@@ -72,8 +72,10 @@ const VideoSlider = () => {
           }
 
           return (
-            <article className={position} key={id}>
-              <div className="slider-hero">{title}</div>
+            <article style={{ marginTop: "9em" }} className={position} key={id}>
+              <div style={{ width: "25rem" }} className="slider-hero">
+                {title}
+              </div>
 
               <img src={image} alt={name} className="person" />
             </article>

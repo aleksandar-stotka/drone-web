@@ -13,7 +13,7 @@ const people = [
     image:
       "https://images.pexels.com/photos/818819/pexels-photo-818819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     name: "john doe",
-    title: "regular guy",
+    title: "it,s always been there",
     quote:
       "Gastropub sustainable tousled prism occupy. Viral XOXO roof party brunch actually, chambray listicle microdosing put a bird on it paleo subway tile squid umami.",
   },
@@ -22,9 +22,10 @@ const people = [
     image:
       "https://images.pexels.com/photos/8657080/pexels-photo-8657080.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     name: "peter smith",
-    title: "product designer",
+    title:
+      "The best films are once where you don't even notice the cinematography   ",
     quote:
-      "Drinking vinegar polaroid street art echo park, actually semiotics next level butcher master cleanse hammock flexitarian ethical paleo.",
+      "Drinking vinegar polaroid street art echo park,  \n actually semiotics next level butcher master cleanse hammock flexitarian ethical paleo.",
   },
 ];
 

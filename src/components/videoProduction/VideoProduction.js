@@ -10,7 +10,15 @@ function VideoProduction() {
 
   return (
     <>
-      <header className="header" onMouseOver={closeSubmenu}>
+      <div style={{ height: "40vh" }}>
+        <VideoSlider />
+      </div>
+
+      <header
+        className="header"
+        onMouseOver={closeSubmenu}
+        style={{ marginTop: "10em" }}
+      >
         <div>
           <div className="video-container">
             <video autoPlay muted loop>
@@ -28,8 +36,8 @@ function VideoProduction() {
             <div className="caption"></div>
           </div>
         </div>
+        <div></div>
       </header>
-      <VideoSlider />
     </>
   );
 }

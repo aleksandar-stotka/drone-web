@@ -33,9 +33,11 @@ Variables
      
       height: 50vh;
       padding: 2em;
-      width: 100%;
-      position: absolute;
+      width: 60rem;
+     
+      margin: auto;
       right: 0%;
+      
       
 
       
@@ -46,16 +48,13 @@ Variables
     justify-content: center;
     font-weight: 500;
   }
-  .title-slide {
-    margin-bottom: 1em;
-    font-size: 1.5rem;
-  }
+ 
   .slider-hero {
       position: absolute;
       top: 30%;
       left: 20%;
       color: aqua;
-      font-size: 3rem;
+      font-size: 2.4rem;
       font-weight: 800;
   }
   .title span {
