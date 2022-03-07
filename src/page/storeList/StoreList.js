@@ -19,10 +19,10 @@ const StoreList = () => {
   const [cart, setCart] = useState({});
   const [showStore, setShowStore] = useState(true);
 
-  const fetchProducts = async () => {
+  const fetchProducts = async () => { 
     const { data } = await commerce.products.list(); ///commers specific api call ,return promise, destruc data for response
     //data is our product   s
-
+     console.log(data)
     setProducts(data);
   };
 
