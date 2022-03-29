@@ -39,20 +39,10 @@ const Footer = () => {
             />
           </a>
         </div>
-        <div className="page-links" style={{ padding: "3em", width: "40rem" }}>
-          <Link
-            style={{
-              height: "5vh",
-              width: "6rem",
-              color: "wheat",
-              background: "none",
-              fontSize: "3rem",
-            }}
-            to="storelist"
-          >
-            STORE
-          </Link>
-        </div>
+        <div
+          className="page-links"
+          style={{ padding: "3em", width: "40rem" }}
+        ></div>
       </div>
     </section>
   );

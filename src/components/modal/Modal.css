@@ -2,10 +2,6 @@
 =============== 
 Variables
 ===============
-*/
-
-
-  
   /*
   =============== 
   Modal
@@ -41,7 +37,7 @@ Variables
     background: rgb(177, 169, 169);
     border-radius: var(--radius);
     width: 90vw;
-    height: 80vh;
+    height: 50vh;
     max-width: 50rem;
     text-align: center;
     display: grid;

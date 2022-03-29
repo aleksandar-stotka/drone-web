@@ -7,6 +7,7 @@ import { useGlobalContext } from "../../context";
 import { Link } from "react-router-dom";
 import Checkout from "../../components/CeckoutForm/checkout/Checkout";
 import { ContactlessOutlined } from "@material-ui/icons";
+import Buttons from "../../components/buttons/Buttons";
 
 //
 
@@ -18,12 +19,17 @@ const StoreList = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
   const [showStore, setShowStore] = useState(true);
+  const [itsLoading, setIsLoading] = useState(false);
+  const [category, setCategory] = useState([]);
 
-  const fetchProducts = async () => { 
+  const fetchProducts = async () => {
+    setIsLoading(true);
     const { data } = await commerce.products.list(); ///commers specific api call ,return promise, destruc data for response
     //data is our product   s
-     console.log(data)
+    console.log(data);
+
     setProducts(data);
+    setIsLoading(false);
   };
 
   const storeIsShow = () => {
@@ -42,6 +48,12 @@ const StoreList = () => {
     const { cart } = await commerce.cart.add(productId, quantity);
 
     setCart(cart);
+  };
+  const handleCategory = (category) => {
+    const newCtegory = products;
+    setCategory(newCtegory);
+    newCtegory.filter((item) => item.categories[0].name === category);
+    setProducts(newCtegory);
   };
 
   const handleUpdatedCartQty = async (porductId, quantity) => {
@@ -67,8 +79,8 @@ const StoreList = () => {
 
   return (
     <div onMouseOver={closeSubmenu}>
+      {itsLoading && <p style={{ color: "red" }}>...it loading</p>}
       <StoreBar totalItems={cart.total_items} isShow={storeIsShow} />
-
       {showStore && (
         <Products products={products} onAddToCart={handleAddToCart} />
       )}
