@@ -5,7 +5,7 @@ import Product from "./Product/Product";
 const Products = ({ products, onAddToCart, findCategory }) => {
   return (
     <>
-      \{" "}
+      {" "}
       <main>
         <Grid
           container

@@ -61,7 +61,6 @@ function ExploreProducts() {
             }}
           >
             <h1 style={{ padding: "2em", color: "white" }}>Agriculture</h1>
-            <Link>SHOW MORE</Link>
           </Link>
 
           <Link
@@ -78,9 +77,7 @@ function ExploreProducts() {
             }}
           >
             <h1 style={{ padding: "2em", color: "white" }}>Enterprise</h1>
-            <Link>SHOW MORE</Link>
           </Link>
-          
         </div>
       </div>
     </>
