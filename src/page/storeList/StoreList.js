@@ -79,7 +79,19 @@ const StoreList = () => {
 
   return (
     <div onMouseOver={closeSubmenu}>
-      {itsLoading && <p style={{ color: "red" }}>...it loading</p>}
+      {itsLoading && (
+        <p
+          style={{
+            color: "red",
+            width: "40rem",
+            fontSize: "10rem",
+            margin: "auto",
+            fontWeight: "bold",
+          }}
+        >
+          ...loading
+        </p>
+      )}
       <StoreBar totalItems={cart.total_items} isShow={storeIsShow} />
       {showStore && (
         <Products products={products} onAddToCart={handleAddToCart} />

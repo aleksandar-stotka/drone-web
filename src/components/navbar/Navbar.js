@@ -2,10 +2,13 @@ import React, { useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import { useGlobalContext } from "../../context";
 import { Link } from "react-router-dom";
+import { Input } from "@material-ui/core";
 import { useLogout } from "../../hooks/useLogout";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import { useState } from "react";
+
 import "./Navbar.scss";
+const ariaLabel = { "aria-label": "description" };
 
 const Navbar = () => {
   const { logout } = useLogout();
@@ -90,6 +93,7 @@ const Navbar = () => {
               Search Models
             </button>
           </li>
+
           <li>
             <button
               style={{
@@ -106,6 +110,10 @@ const Navbar = () => {
             >
               Specialized
             </button>
+          </li>
+
+          <li>
+            <Input error inputProps={ariaLabel} placeholder="search products" />
           </li>
         </ul>
       </div>
