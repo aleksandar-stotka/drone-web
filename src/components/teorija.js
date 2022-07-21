@@ -8,7 +8,7 @@
 //state = initialState a so action izmenuvame
 // toa go pravime so if state proveruvame dali akcijata so ja dispath e ednakva
 //akcijata ja potvrduvame so store.dispatch({type: "DECREASE"})
-//I PRAVIME nov object
+//I PRAVIME nov objecty
 //if no one action match than return old state
 //RDUCER// one folder for reducer
 
