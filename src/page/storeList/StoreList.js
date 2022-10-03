@@ -14,23 +14,12 @@ import Buttons from "../../components/buttons/Buttons";
 //reducer is way to update our store
 
 const StoreList = () => {
-  const { closeSubmenu, navShow } = useGlobalContext();
+  const { closeSubmenu, products } = useGlobalContext();
 
-  const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
   const [showStore, setShowStore] = useState(true);
   const [itsLoading, setIsLoading] = useState(false);
   const [category, setCategory] = useState([]);
-
-  const fetchProducts = async () => {
-    setIsLoading(true);
-    const { data } = await commerce.products.list(); ///commers specific api call ,return promise, destruc data for response
-    //data is our product   s
-    console.log(data);
-
-    setProducts(data);
-    setIsLoading(false);
-  };
 
   const storeIsShow = () => {
     setShowStore(false);
@@ -48,12 +37,6 @@ const StoreList = () => {
     const { cart } = await commerce.cart.add(productId, quantity);
 
     setCart(cart);
-  };
-  const handleCategory = (category) => {
-    const newCtegory = products;
-    setCategory(newCtegory);
-    newCtegory.filter((item) => item.categories[0].name === category);
-    setProducts(newCtegory);
   };
 
   const handleUpdatedCartQty = async (porductId, quantity) => {
@@ -73,7 +56,6 @@ const StoreList = () => {
   /////////////////////////////////////////////////
 
   useEffect(() => {
-    fetchProducts();
     fetchCart();
   }, []);
 

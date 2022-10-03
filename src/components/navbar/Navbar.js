@@ -6,19 +6,33 @@ import { Input } from "@material-ui/core";
 import { useLogout } from "../../hooks/useLogout";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import { useState } from "react";
+import {
+  Card,
+  CardMedia,
+  CardContent,
+  CardActions,
+  Typography,
+  IconButton,
+  onAddCategory,
+} from "@material-ui/core";
 
 import "./Navbar.scss";
+import Product from "../Products/Product/Product";
 const ariaLabel = { "aria-label": "description" };
 
 const Navbar = () => {
   const { logout } = useLogout();
   const { user } = useAuthContext();
 
-  const { openSidebar, closeSubmenu, openSubmenu } = useGlobalContext();
+  const [name, setName] = useState("");
+
+  const { openSidebar, closeSubmenu, openSubmenu, products } =
+    useGlobalContext();
   const [button, setButton] = useState(true);
   const [navbar, setNavbar] = useState(false);
+  const [searchInput, setSearchInput] = useState("");
   const [scrollPosition, setPosition] = useState({ scrollX: 0, scrollY: 0 });
-
+  console.log(products);
   const displaySubmenu = (e) => {
     const page = e.target.textContent;
 
@@ -29,17 +43,27 @@ const Navbar = () => {
 
     openSubmenu(page, { center, bottom });
   };
-  const handleSubmenu = (e) => {
-    if (!e.target.classList.contains("link-btn")) {
-      closeSubmenu();
-    }
-  };
   const changeScroll = () => {
     if (window.innerWidth <= 960) {
       setButton(true);
     } else {
       setButton(false);
     }
+  };
+  ///////////////////////////////////
+  const filter = (e) => {
+    const keyword = e.target.value;
+
+    if (keyword !== "") {
+      products.filter((user) => {
+        return user.name.toLowerCase().startsWith(keyword.toLowerCase());
+        // Use the toLowerCase() method to make it case-insensitive
+      });
+    } else {
+      // If the text field is empty, show all users
+    }
+
+    setName(keyword);
   };
 
   useEffect(() => {
@@ -54,6 +78,8 @@ const Navbar = () => {
       setNavbar(false);
     }
   };
+  ///////////////////////////////////////
+
   window.addEventListener("scroll", changeBackground);
 
   return (
@@ -110,10 +136,6 @@ const Navbar = () => {
             >
               Specialized
             </button>
-          </li>
-
-          <li>
-            <Input error inputProps={ariaLabel} placeholder="search products" />
           </li>
         </ul>
       </div>
