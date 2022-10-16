@@ -21,7 +21,7 @@ const MavicSeries = () => {
     <>
       <header className="header" onMouseOver={closeSubmenu}>
         <div
-          className={`${newBack ? "video-change" || "color-h1" : "content"}`}
+          className={`${newBack && "video-change"}`}
         >
           <div className="video-container">
             <video autoPlay muted loop>
@@ -40,7 +40,7 @@ const MavicSeries = () => {
           </div>
         </div>
       </header>
-      <div className={`${newBack ? "title-hero" : "title"}`}>
+      <div className={`${newBack && "title-hero" }`}>
         <h1>Seeing is Believing</h1>
       </div>
 

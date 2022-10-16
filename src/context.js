@@ -11,7 +11,7 @@ export const AppProvider = ({ children }) => {
   const [page, setPage] = useState({ page: "", links: [] }); ///has no value //in sublin ks have value
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [navNotVisible, setNavNotVisible] = useState(false);
-  const [newBack, setNewBack] = useState(false);
+  const [newBack, setNewBack] = useState(false); 
   const [showNav, SetNav] = useState(true);
   const [products, setProducts] = useState([]);
   ///////////////// set products
@@ -29,6 +29,7 @@ export const AppProvider = ({ children }) => {
     try {
       setTimeout(() => {
         setNewBack(true);
+        console.log('mavic')
       }, 4000);
     } catch (err) {
       console.log(err);
